@@ -1,0 +1,28 @@
+-- import: fpm
+-- import: fifthtry.github.io/texty-ps as ps
+-- import: fifthtry.github.io/texty-ps/assets
+
+-- ps.page:
+
+I never asked the one who was perfect. I was seeking for the one who would complement all my halves. The one who would take me as I am and the one to whom I could take as one is. You are enough because you make me enough for you! Wordly glam is fake, you are till my fate. 
+
+-- ds.image: This is the image with caption
+src: $assets.files.static.back1.png
+width: fill
+
+Lorem Ipsum is simply dummy text of the printing and typesetting 
+in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+
+
+-- ps.article-card:
+timestamp: 20
+
+Lorem Ipsum is simply dummy text of the printing and typesetting 
+in the 1960s with the release of Letraset sheets containing Lorem Ipsum 
+passages, and more recently with desktop publishing software like Aldus 
+PageMaker including versions of Lorem Ipsum.
+passages, and more recently with desktop publishing software like Aldus 
+PageMaker including versions of Lorem Ipsum.passages, and more recently with desktop publishing software like Aldus 
+PageMaker including versions of Lorem Ipsum.
+
+
