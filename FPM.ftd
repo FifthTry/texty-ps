@@ -1,0 +1,8 @@
+-- import: fpm
+
+-- fpm.package: fifthtry.github.io/texty-ps
+download-base-url: https://raw.githubusercontent.com/fifthtry/texty-ps/main
+
+-- fpm.dependency: fifthtry.github.io/doc-site as ds
+
+-- fpm.auto-import: ds
