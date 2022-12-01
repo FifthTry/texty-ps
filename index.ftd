@@ -5,7 +5,6 @@
 
 
 
-
 -- boolean is-mobile: false
 
 -- boolean is-open: false
@@ -29,21 +28,19 @@ PageMaker including versions of Lorem Ipsum.
 
 
 
+
+
+
+
+
+
+
 -- page:
 avatar: $assets.files.static.avatar.png
 contact-txt: Contact
 contact-url: /contact/
 
 -- home: 
-
-
-
-
-
-
-
-
-
 
 -- ftd.column page:
 width: fill
@@ -90,7 +87,6 @@ padding-top: 28
 id: second-container
 spacing: 12
 
-
 --- ftd.column:
 if: $avatar is not null
 width: percent 34
@@ -114,7 +110,6 @@ link: $contact-url
 --- ftd.column:
 width: fill
 id: third-container
-
 
 --- ftd.text: $current-section.title
 if: $current-section.title is not null
@@ -146,6 +141,7 @@ min-height: calc 100vh - 330px
 --- container: first-container
 
 --- footer:
+
 
 
 
@@ -428,7 +424,6 @@ color: $fpm.color.main.custom.two
 role: $fpm.type.copy-tight
 style: bold
 
-
 --- ftd.text: $title
 role: $fpm.type.copy-tight
 link: $link
@@ -507,7 +502,6 @@ text: $body
 role: $fpm.type.copy-relaxed
 color: $fpm.color.main.success.base
 margin-bottom: 28
-
 
 
 
