@@ -543,3 +543,4 @@ role: $fpm.type.copy-tight
 text: $body
 text-indent: 8
 role: $fpm.type.copy-tight
+margin-top: -16
