@@ -1,4 +1,3 @@
-
 -- import: fpm
 -- import: fifthtry.github.io/texty-ps/assets
 
@@ -16,7 +15,7 @@
 -- fpm.sitemap-data sitemap:
 $processor$: sitemap
 
--- string copyright: Copyright 2012-2022 Xe Iaso (Christine Dodrill).
+-- string copyright: Copyright 2012-2022 FifthTry (Meenu Kumari).
 
 -- string body: 
 
@@ -137,6 +136,7 @@ width: fill
 text: $body
 role: $fpm.type.copy-tight
 color: $fpm.color.main.success.base
+margin-bottom: 26
 
 --- ftd.column:
 width: fill
