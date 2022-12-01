@@ -1,57 +1,545 @@
 -- import: fifthtry.github.io/texty-ps/assets
+-- import: fpm
+-- import: fifthtry.github.io/texty-ps/assets
 
 
 
--- ds.page: Welcome to your [FPM site](https://fpm.dev/)
-
-FPM Blank Package Template Repo
-
-🧑‍🚀 **Seasoned traveler?** update this file. Enjoy!
 
 
---- ds.image: doc-site
-src: $assets.files.doc-site-example.png
+
+-- boolean is-mobile: false
+
+-- boolean is-open: false
+
+-- is-mobile: true
+
+-- fpm.sitemap-data sitemap:
+$processor$: sitemap
+
+-- string copyright: Copyright 2012-2022 Xe Iaso (Christine Dodrill).
+
+-- string body: 
+
+Lorem Ipsum is simply dummy text of the printing and typesetting in the 1960s 
+with the release of 
+
+Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+publishing software like Aldus
+
+PageMaker including versions of Lorem Ipsum.
+
+
+
+-- page:
+avatar: $assets.files.static.avatar.png
+contact-txt: Contact
+contact-url: /contact/
+
+-- home: 
+
+
+
+
+
+
+
+
+
+
+-- ftd.column page:
+width: fill
+open: true
+append-at: main-container
+boolean show-menu: false
+fpm.toc-item list sections: $sitemap.sections
+fpm.toc-item list sub-sections: $sitemap.subsections
+fpm.toc-item list toc: $sitemap.toc
+optional caption title:
+optional body body:
+optional fpm.toc-item current-section: $sitemap.current-section
+optional ftd.image-src avatar:
+optional string contact-txt:
+optional string contact-url:
+boolean show-wrap: false
+ftd.color backgroundcolor: $fpm.color.main.background.step-1
+background-color: $backgroundcolor
+padding-vertical: 14
+;min-height: fill
+
+--- ftd.column:
+width: fill
+id: first-container
+align: center
+max-width: 980
+padding-horizontal: 14
+
+--- ftd.column:
+align: center
+max-width: 980
+width: fill
+;padding-horizontal: 14
+
+--- header:
+sections: $sections
+$show-menu: $show-menu
+
+--- container: first-container
+
+--- ftd.row:
+width: fill
+padding-top: 28
+id: second-container
+spacing: 12
+
+
+--- ftd.column:
+if: $avatar is not null
+width: percent 34
+
+--- ftd.image:
+src: $assets.files.static.avatar.png
+width: fill
+height: auto
+
+--- ftd.text: $contact-txt
+role: $fpm.type.label-small
+color: $fpm.color.main.cta-tertiary.focused
+border-bottom: 1
+border-color: $fpm.color.main.cta-tertiary.focused
+padding-bottom: 4
+margin-top: 12
+link: $contact-url
+
+--- container: second-container
+
+--- ftd.column:
+width: fill
+id: third-container
+
+
+--- ftd.text: $current-section.title
+if: $current-section.title is not null
+role: $fpm.type.label-big
+style: bold
+border-bottom: 8
+border-style: double 
+padding-bottom: 6
+text-transform: capitalize
+border-color: $fpm.color.main.custom.two
+color: $fpm.color.main.custom.two
+margin-bottom: 24
+
+--- container: third-container
+
+--- ftd.column:
+width: fill
+id: main-container
+min-height: calc 100vh - 330px
+
+--- container: first-container
+
+--- footer:
+
+
+
+
+
+
+
+
+
+
+-- ftd.row header:
+optional caption title:
+optional ftd.image-src site-logo:
+fpm.toc-item list sections: 
+string width: fill
+
+--- ftd.image:
+src: $assets.files.static.logo.svg
+width: 19
+height: 32
+margin-top: 4
+margin-right: 7
+
+--- header-item: $obj.title
+url: $obj.url
+is-active: $obj.is-active
+$loop$: $sections as $obj
+
+
+
+
+
+
+
+
+
+
+-- ftd.row header-item:
+caption title:
+string url:
+boolean is-active:
+
+--- ftd.text: $title
+role: $fpm.type.label-small
+color: $fpm.color.main.cta-tertiary.focused
+text-transform: capitalize
+border-bottom: 1
+border-color: $fpm.color.main.cta-tertiary.focused
+link: $url
+
+--- ftd.row: 
+width: 6
+height: 1
+background-color: $fpm.color.main.text-strong
+align: center
+margin-left: 12
+margin-right: 12
+
+
+
+
+
+
+
+
+
+
+-- ftd.column home:
+optional caption title:
+optional body body:
+fpm.toc-item list sub-sections: $sitemap.subsections
+fpm.toc-item list toc: $sitemap.toc
+optional fpm.toc-item current-section: $sitemap.current-section
+optional ftd.image-src avatar:
+optional string contact-txt:
+optional string contact-url:
+boolean show-wrap: false
 width: fill
 
+--- ftd.column:
+if: $sub-sections is not empty
+--- subsection-item: $obj.title
+$loop$: $sub-sections as $obj
+is-active: $obj.is-active
+link: $obj.url
 
---- ds.h1: 🚀 Project Structure
+--- container: ftd.main
 
-Inside of your FPM project, you'll see the following folders and files:
+--- ftd.column:
+if: not $show-wrap
+width: fill
+id: third-container
 
+--- header-item-section: $obj.title
+$loop$: $toc as $obj
+is-active: $obj.is-active
+link: $obj.url
+children: $obj.children
 
---- ds.code:
-lang:
+--- container: ftd.main
 
-/
-├── .build/
-│   └── index.html
-├── .packages/
-│   └── fifthtry.github.io/
-│   	└── All downloaded dependencies
-│   	
-├── FPM.ftd
-├── index.ftd
-└── README.md
+--- ftd.column:
+if: $show-wrap
+width: fill
+id: third-container
 
+--- ftd.column:
+wrap: true
+height: 400
+width: percent 48
 
-
---- ds.h1: 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
---- ds.code:
-lang:
-
-=======================================================================
-| Command                | Action                                     |
-| :--------------------- | :----------------------------------------- |
-| fpm build              | FPM builder installs all `FPM` dependencies|
-| fpm serve              | Starts local dev server at available port  |
-|                        | `localhost:8000`                           |
-=======================================================================
+--- header-item-section: $obj.title
+$loop$: $toc as $obj
+is-active: $obj.is-active
+link: $obj.url
+children: $obj.children
+$show-wrap: $show-wrap
 
 
---- ds.h1: 👀 Want to learn more?
 
-Feel free to check [our documentation](https://fpm.dev/) or jump into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
 
+
+
+
+
+
+
+-- ftd.column header-item-section: 
+caption title:
+optional ftd.image-src icon:
+optional string link:
+boolean is-active: 
+fpm.toc-item list children:
+boolean $show-wrap: false
+width if $show-wrap: fill
+width: fill
+margin-bottom: 24
+
+--- ftd.row: 
+if: $link is not null
+width: fill
+id: fourth-container
+margin-bottom: 24
+
+--- ftd.text: \\#####
+color: $fpm.color.main.custom.two
+role: $fpm.type.copy-tight
+style: bold
+
+--- ftd.text: $title
+role: $fpm.type.copy-tight
+link: $link
+padding-left: 10
+white-space: nowrap
+color: $fpm.color.main.custom.two
+style: bold
+text-transform: capitalize
+
+--- container: ftd.main
+
+--- ftd.row: 
+if: $link is null
+width: fill
+id: fourth-container
+margin-bottom: 24
+
+--- ftd.text: \\#####
+color: $fpm.color.main.custom.two
+role: $fpm.type.copy-tight
+style: bold
+
+--- ftd.text: $title
+if: $link is null
+text-transform: capitalize
+role: $fpm.type.copy-tight
+white-space: nowrap
+padding-left: 10
+color: $fpm.color.main.custom.two
+style: bold
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $children is not empty
+
+--- header-item-toc: $obj.title
+$loop$: $children as $obj
+is-active: $obj.is-active
+link: $obj.url
+
+
+
+
+
+
+
+
+
+
+-- ftd.row header-item-toc: 
+caption title:
+optional ftd.image-src icon:
+optional string link:
+boolean is-active: 
+
+--- ftd.row: 
+if: $link is not null
+width: fill
+id: fourth-container
+margin-bottom: 8
+
+--- ftd.row: 
+width: 6
+height: 1
+background-color: $fpm.color.main.text-strong
+align: center
+margin-left: 12
+margin-right: 12
+
+--- container: fourth-container
+
+--- ftd.text: $title
+role: $fpm.type.copy-tight
+link: $link
+white-space: nowrap
+color: $fpm.color.main.custom.eight
+color if $is-active: $fpm.color.main.success.base
+color if $MOUSE-IN: $fpm.color.main.success.base
+background-color if $MOUSE-IN: $fpm.color.main.custom.eight
+border-bottom: 1
+border-color: $fpm.color.main.custom.eight
+
+--- container: ftd.main
+
+--- ftd.row: 
+if: $link is null
+width: fill
+id: fourth-container
+margin-bottom: 8
+
+--- ftd.row: 
+width: 6
+height: 1
+background-color: $fpm.color.main.text-strong
+align: center
+margin-left: 12
+margin-right: 12
+
+--- container: fourth-container
+
+--- ftd.text: $title
+if: $link is null
+role: $fpm.type.copy-tight
+white-space: nowrap
+color: $fpm.color.main.success.base
+
+
+
+
+
+
+
+
+
+
+-- ftd.row subsection-item: 
+caption title:
+optional ftd.image-src icon:
+optional string link:
+boolean is-active: 
+
+--- ftd.row: 
+if: $link is not null
+width: fill
+id: fourth-container
+margin-bottom: 24
+
+--- ftd.text: \\####
+color: $fpm.color.main.custom.two
+role: $fpm.type.copy-tight
+style: bold
+
+
+--- ftd.text: $title
+role: $fpm.type.copy-tight
+link: $link
+padding-left: 10
+/padding-bottom: 15
+white-space: nowrap
+color: $fpm.color.main.custom.two
+;color if $is-active: $fpm.color.main.cta-primary.base
+style: bold
+text-transform: capitalize
+
+--- container: ftd.main
+
+--- ftd.row: 
+if: $link is null
+width: fill
+id: fourth-container
+margin-bottom: 24
+
+--- ftd.text: \\####
+color: $fpm.color.main.custom.two
+role: $fpm.type.copy-tight
+style: bold
+
+--- ftd.text: $title
+if: $link is null
+text-transform: capitalize
+role: $fpm.type.copy-tight
+/padding-bottom: 15
+white-space: nowrap
+padding-left: 10
+color: $fpm.color.main.custom.two
+style: bold
+
+
+
+
+
+
+
+
+
+
+-- ftd.column article-card:
+optional caption title:
+optional string timestamp:
+optional body body:
+color: $fpm.color.main.text
+spacing: 16
+
+--- ftd.text: $title
+if: $title is not null
+role: $fpm.type.heading-large
+color: $fpm.color.main.text-strong
+
+--- ftd.row:
+id: post-meta-container
+spacing: 12
+
+--- ftd.text: Read time in minutes:
+role: $fpm.type.fine-print
+white-space: nowrap
+style: hairline
+color: $fpm.color.main.success.base
+
+--- ftd.text: $timestamp
+role: $fpm.type.fine-print
+white-space: nowrap
+style: hairline
+color: $fpm.color.main.success.base
+
+--- container: ftd.main
+
+--- ftd.text:
+text: $body
+role: $fpm.type.copy-relaxed
+color: $fpm.color.main.success.base
+margin-bottom: 28
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.column footer:
+width: fill
+string copyright: $copyright
+body body: $body
+border-top: 2
+border-style: dashed
+border-color: $fpm.color.main.success.base
+padding-top: 32
+color: $fpm.color.main.success.base
+spacing: 16
+--- ftd.row:
+width: fill
+spacing: 8
+
+--- ftd.text: \\>
+role: $fpm.type.copy-tight
+
+--- ftd.text: $copyright
+role: $fpm.type.copy-tight
+
+--- container: ftd.main
+
+--- ftd.row:
+width: fill
+
+--- ftd.text: \\>
+role: $fpm.type.copy-tight
+
+--- ftd.text:
+text: $body
+text-indent: 8
+role: $fpm.type.copy-tight

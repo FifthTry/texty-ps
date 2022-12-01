@@ -6,3 +6,83 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/texty-ps/main
 -- fpm.dependency: fifthtry.github.io/doc-site as ds
 
 -- fpm.auto-import: ds
+
+-- fpm.dependency: fifthtry.github.io/doc-site as ds
+-- fpm.dependency: fifthtry.github.io/resume
+-- fpm.dependency: fifthtry.github.io/caffeine-resume 
+
+
+
+
+-- fpm.sitemap:
+
+# John: /
+nav-title: John Deo
+
+## Archmage of Infrastructure: /
+
+- Skills: 
+  - Go, Lua, Haskell, C, Rust and other languages:
+  - Docker (deployment, development & more):
+  - Mashups of data:
+  - Kubernetes:
+
+- Highlighted Projects: 
+  - Lorem Ipsum is simply:
+  - Lorem Ipsum is simply:
+  - Lorem Ipsum is simply:
+  - Lorem Ipsum is simply:
+
+
+- Quick Links: 
+  - GitHub:
+  - Discord:
+
+
+
+
+# blog: /blog/
+nav-title: Blog post
+
+- all post:
+  - N01 15 2022 - Lorem Ipsum is simply: /posts/post-1/
+  - N01 04 2022 - Lorem Ipsum is simply:/posts/post-2/
+  - N07 24 2022 - Lorem Ipsum is simply: /posts/post-3/
+  - N07 07 2022 - Lorem Ipsum is simply: /posts/post-1/
+  - N06 30 2022 - Lorem Ipsum is simply: /posts/post-1/
+
+# contact: /contact/
+nav-title: Contact Information
+
+- email :
+  - me@xeias.net
+
+- Social Media:
+  - GitHub:
+  - LinkedIN:
+  - Patreon:
+  - Twitter:
+  - Discord:
+  - Telegram:
+
+
+- Other information:
+
+- Discord:
+
+# Resume: /resume/
+
+
+# Talks: /talks/
+
+- All talks:
+  - N01 15 2022 - Lorem Ipsum is simply:
+  - N01 04 2022 - Lorem Ipsum is simply:
+  - N07 24 2022 - Lorem Ipsum is simply:
+  - N07 07 2022 - Lorem Ipsum is simply:
+  - N06 30 2022 - Lorem Ipsum is simply:
+
+
+
+
+
