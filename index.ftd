@@ -131,6 +131,13 @@ margin-bottom: 24
 
 --- container: third-container
 
+--- ftd.text:
+if:$body is not null
+width: fill
+text: $body
+role: $fpm.type.copy-tight
+color: $fpm.color.main.success.base
+
 --- ftd.column:
 width: fill
 id: main-container
