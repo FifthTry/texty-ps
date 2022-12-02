@@ -53,6 +53,8 @@ fpm.toc-item list sub-sections: $sitemap.subsections
 fpm.toc-item list toc: $sitemap.toc
 optional caption title:
 optional body body:
+optional fpm.toc-item current-subsection: $sitemap.current-subsection
+optional fpm.toc-item current-page: $sitemap.current-page
 optional fpm.toc-item current-section: $sitemap.current-section
 optional ftd.image-src avatar:
 optional string contact-txt:
@@ -115,6 +117,18 @@ id: third-container
 
 --- ftd.text: $current-section.title
 if: $current-section.title is not null
+role: $fpm.type.label-big
+style: bold
+border-bottom: 8
+border-style: double 
+padding-bottom: 6
+text-transform: capitalize
+border-color: $fpm.color.main.custom.two
+color: $fpm.color.main.custom.two
+margin-bottom: 24
+
+--- ftd.text: $current-page.title
+if: $current-page.title is not null
 role: $fpm.type.label-big
 style: bold
 border-bottom: 8
