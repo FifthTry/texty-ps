@@ -39,7 +39,7 @@ PageMaker including versions of Lorem Ipsum.
 avatar: $assets.files.static.avatar.png
 contact-txt: Contact
 contact-url: /contact/
-is-margin: true
+
 
 -- home: 
 
@@ -553,4 +553,4 @@ role: $fpm.type.copy-tight
 text: $body
 text-indent: 8
 role: $fpm.type.copy-tight
-margin-top if $is-margin: -16 
+margin-top: -16 
