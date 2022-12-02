@@ -16,13 +16,45 @@ It is not verbose like HTML, and not simplistic like Markdown.
 -- ds.code:
 lang: ftd
 
+
 \-- import: lib
 
 \-- lib.h1: Hello World
 
 -- ds.markdown:
 
+
+Using the code given above we can show the hello world output as given below.
+
+-- ftd.text: Hello World
+color: $fpm.color.main.text-strong
+border-width: 1
+padding: 20
+
+-- ftd.text:
+margin-top: 36
+color: $fpm.color.main.text-strong
+
+
+Here is a FTD document, that will help us to know how we can set image in ftd:
+
+-- ds.code:
+lang: ftd
+
+\-- ftd.column image:
+caption title:
+ftd.image-src src:
+body body:
+width: fill
+background-color: $fpm.color.main.background.base
+padding-vertical: 20
+padding-horizontal: 20
+
+-- ds.markdown:
+
 Using the code given above we can show the image as given below.
+
+
 
 -- ds.image: This is the image with caption
 src: $assets.files.static.back1.png
