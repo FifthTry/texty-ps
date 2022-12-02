@@ -110,10 +110,18 @@ nav-title: Contact Information
   - N06 30 2022 - Brave, Not Perfect: /posts/post-3/
 
 
-# About: /
+# About: /about/
 nav-title: About Me
+
+- About Me:
+  - N01 15 2022 - You are enough: /posts/post-1/
+  - N01 04 2022 - Coffee shop in winter:/posts/post-2/
+  - N07 24 2022 - Clean communities, healthy citizens.: /posts/post-3/
+  - N07 07 2022 - Good Life, Good Vibes: /posts/post-1/
+  - N06 30 2022 - The Power of Positive Thinking: /posts/post-2/
+  - N06 30 2022 - It Ends With Us: /posts/post-3/
 
 
 # Essay: /posts/post-1/
-nav-title: Essay
+nav-title: Essays
 
