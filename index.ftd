@@ -33,6 +33,7 @@ PageMaker including versions of Lorem Ipsum.
 avatar: $assets.files.static.avatar.png
 contact-txt: Contact
 contact-url: /contact/
+is-margin: true
 
 -- home: 
 
@@ -60,6 +61,7 @@ optional ftd.image-src avatar:
 optional string contact-txt:
 optional string contact-url:
 boolean show-wrap: false
+boolean is-margin: false
 ftd.color backgroundcolor: $fpm.color.main.background.step-1
 background-color: $backgroundcolor
 padding-vertical: 14
@@ -141,11 +143,12 @@ margin-bottom: 26
 --- ftd.column:
 width: fill
 id: main-container
-min-height: calc 100vh - 330px
+min-height: calc 100vh - 315px
 
 --- container: first-container
 
 --- footer:
+is-margin: $is-margin
 
 
 
@@ -166,8 +169,8 @@ string width: fill
 src: $assets.files.static.logo.svg
 width: 19
 height: 32
-margin-top: 4
-margin-right: 7
+;margin-top: 4
+;margin-right: 7
 
 --- header-item: $obj.title
 url: $obj.url
@@ -188,14 +191,6 @@ caption title:
 string url:
 boolean is-active:
 
---- ftd.text: $title
-role: $fpm.type.label-small
-color: $fpm.color.main.cta-tertiary.focused
-text-transform: capitalize
-border-bottom: 1
-border-color: $fpm.color.main.cta-tertiary.focused
-link: $url
-
 --- ftd.row: 
 width: 6
 height: 1
@@ -204,6 +199,16 @@ align: center
 margin-left: 12
 margin-right: 12
 
+
+--- container: ftd.main
+
+--- ftd.text: $title
+role: $fpm.type.label-small
+color: $fpm.color.main.cta-tertiary.focused
+text-transform: capitalize
+border-bottom: 1
+border-color: $fpm.color.main.cta-tertiary.focused
+link: $url
 
 
 
@@ -523,14 +528,18 @@ width: fill
 string copyright: $copyright
 body body: $body
 border-top: 2
+boolean is-margin: false
 border-style: dashed
 border-color: $fpm.color.main.success.base
 padding-top: 32
 color: $fpm.color.main.success.base
-spacing: 16
+
+
+
 --- ftd.row:
 width: fill
 spacing: 8
+margin-bottom: 16
 
 --- ftd.text: \\>
 role: $fpm.type.copy-tight
@@ -550,4 +559,4 @@ role: $fpm.type.copy-tight
 text: $body
 text-indent: 8
 role: $fpm.type.copy-tight
-margin-top: -16
+margin-top if $is-margin: -16 
