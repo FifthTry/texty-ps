@@ -36,7 +36,7 @@ PageMaker including versions of Lorem Ipsum.
 
 
 -- page:
-avatar: $assets.files.static.avatar.png
+avatar: $assets.files.static.avatar.jpeg
 contact-txt: Contact
 contact-url: /contact/
 
@@ -94,7 +94,7 @@ if: $avatar is not null
 width: percent 34
 
 --- ftd.image:
-src: $assets.files.static.avatar.png
+src: $assets.files.static.avatar1.jpeg
 width: fill
 height: auto
 
@@ -165,7 +165,7 @@ string width: fill
 src: $assets.files.static.logo.svg
 width: 19
 height: 32
-;margin-top: 4
+margin-top: -7
 ;margin-right: 7
 
 --- header-item: $obj.title
