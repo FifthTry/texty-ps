@@ -14,9 +14,9 @@
 -- fpm.sitemap-data sitemap:
 $processor$: sitemap
 
--- string copyright: Copyright 2012-2022 FifthTry (Meenu Kumari).
+-- optional string copyright: Copyright 2012-2022 FifthTry (Meenu Kumari).
 
--- string body: 
+-- string footer: 
 
 Lorem Ipsum is simply dummy text of the printing and typesetting in the 1960s 
 with the release of 
@@ -27,7 +27,9 @@ publishing software like Aldus
 PageMaker including versions of Lorem Ipsum.
 
 
-
+-- ftd.image-src site-logo:
+dark: assets.files.static.logo.svg
+light: assets.files.static.logo.svg
 
 
 
@@ -96,7 +98,7 @@ if: $avatar is not null
 width: percent 34
 
 --- ftd.image:
-src: $assets.files.static.avatar1.jpeg
+src: $avatar
 width: fill
 height: auto
 
@@ -152,11 +154,12 @@ margin-bottom: 26
 --- ftd.column:
 width: fill
 id: main-container
-min-height: calc 100vh - 315px
+min-height: calc 100% - 259px
+min-height if $current-section.title is not null: calc 100vh - 320px
 
 --- container: first-container
 
---- footer:
+--- footer-card:
 is-margin: $is-margin
 
 
@@ -171,12 +174,11 @@ is-margin: $is-margin
 
 -- ftd.row header:
 optional caption title:
-optional ftd.image-src site-logo:
 fpm.toc-item list sections: 
 string width: fill
 
 --- ftd.image:
-src: $assets.files.static.logo.svg
+src: $site-logo
 width: 19
 height: 32
 margin-top: -7
@@ -531,10 +533,8 @@ margin-bottom: 28
 
 
 
--- ftd.column footer:
+-- ftd.column footer-card:
 width: fill
-string copyright: $copyright
-body body: $body
 border-top: 2
 boolean is-margin: false
 border-style: dashed
@@ -564,7 +564,7 @@ width: fill
 role: $fpm.type.copy-tight
 
 --- ftd.text:
-text: $body
+text: $footer
 text-indent: 8
 role: $fpm.type.copy-tight
 margin-top: -16 
