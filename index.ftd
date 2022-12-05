@@ -155,7 +155,7 @@ margin-bottom: 26
 width: fill
 id: main-container
 min-height: calc 100% - 259px
-min-height if $current-section.title is not null: calc 100vh - 320px
+min-height if $current-section.title is not null: calc 100vh - 304px
 
 --- container: first-container
 
