@@ -10,6 +10,7 @@
 -- boolean is-open: false
 
 -- is-mobile: true
+if: $ftd.device == mobile
 
 -- fpm.sitemap-data sitemap:
 $processor$: sitemap
@@ -28,8 +29,8 @@ PageMaker including versions of Lorem Ipsum.
 
 
 -- ftd.image-src site-logo:
-dark: assets.files.static.logo.svg
-light: assets.files.static.logo.svg
+dark: assets.files.static.logo.svg.dark
+light: assets.files.static.logo.svg.light
 
 
 
@@ -38,17 +39,22 @@ light: assets.files.static.logo.svg
 
 
 -- page:
-avatar: $assets.files.static.avatar.jpeg
+avatar: $assets.files.static.avatar1.jpeg
 contact-txt: Contact
 contact-url: /contact/
-
+id: page-id 
 
 -- home: 
+
+
+
+
 
 -- ftd.column page:
 width: fill
 open: true
-append-at: main-container
+id: page-container
+append-at: page-container
 boolean show-menu: false
 fpm.toc-item list sections: $sitemap.sections
 fpm.toc-item list sub-sections: $sitemap.subsections
@@ -67,6 +73,73 @@ ftd.color backgroundcolor: $fpm.color.main.background.step-1
 background-color: $backgroundcolor
 padding-vertical: 14
 ;min-height: fill
+
+--- page-desktop: $title
+if: not $is-mobile
+id: page-container
+show-menu: $show-menu
+sections: $sections
+sub-sections: $sub-sections
+toc: $toc
+current-subsection: $current-subsection
+current-page: $current-page
+current-section: $current-section
+avatar: $avatar
+contact-txt: $contact-txt
+contact-url: $contact-url
+show-wrap: $show-wrap
+is-margin: $is-margin
+
+--- container: ftd.main
+
+--- page-mobile: $title
+if: $is-mobile
+id: page-container
+show-menu: $show-menu
+sections: $sections
+sub-sections: $sub-sections
+toc: $toc
+current-subsection: $current-subsection
+current-page: $current-page
+current-section: $current-section
+avatar: $avatar
+contact-txt: $contact-txt
+contact-url: $contact-url
+show-wrap: $show-wrap
+is-margin: $is-margin
+
+
+
+
+
+
+
+
+
+
+-- ftd.column page-desktop:
+open: true
+id: page-container
+append-at: page-container
+boolean show-menu: false
+fpm.toc-item list sections:
+fpm.toc-item list sub-sections:
+fpm.toc-item list toc:
+optional caption title:
+optional body body:
+optional fpm.toc-item current-subsection:
+optional fpm.toc-item current-page:
+optional fpm.toc-item current-section:
+optional ftd.image-src avatar:
+optional string contact-txt:
+optional string contact-url:
+boolean show-wrap: false
+boolean is-margin: false
+align: center
+max-width: 980
+padding-horizontal: 14
+
+--- container: ftd.main
 
 --- ftd.column:
 width: fill
@@ -153,29 +226,47 @@ margin-bottom: 26
 
 --- ftd.column:
 width: fill
-id: main-container
-min-height: calc 100% - 259px
-min-height if $current-section.title is not null: calc 100vh - 304px
+id: page-container
+min-height: calc 100vh - 315px
+
 
 --- container: first-container
 
 --- footer-card:
 is-margin: $is-margin
 
-
-
-
-
-
-
-
-
-
-
 -- ftd.row header:
 optional caption title:
 fpm.toc-item list sections: 
+optional ftd.image-src site-logo:
 string width: fill
+
+--- header-desktop: $title
+if: not $is-mobile
+site-logo: $site-logo
+sections: $sections
+
+--- container: ftd.main
+
+--- header-mobile: $title
+if: $is-mobile
+site-logo: $site-logo
+sections: $sections
+
+
+
+
+
+
+
+
+
+
+-- ftd.row header-desktop:
+optional caption title:
+optional ftd.image-src site-logo:
+fpm.toc-item list sections: 
+width: fill
 
 --- ftd.image:
 src: $site-logo
@@ -198,38 +289,6 @@ $loop$: $sections as $obj
 
 
 
--- ftd.row header-item:
-caption title:
-string url:
-boolean is-active:
-
---- ftd.row: 
-width: 6
-height: 1
-background-color: $fpm.color.main.text-strong
-align: center
-margin-left: 12
-margin-right: 12
-
-
---- container: ftd.main
-
---- ftd.text: $title
-role: $fpm.type.label-small
-color: $fpm.color.main.cta-tertiary.focused
-text-transform: capitalize
-border-bottom: 1
-border-color: $fpm.color.main.cta-tertiary.focused
-link: $url
-
-
-
-
-
-
-
-
-
 -- ftd.column home:
 optional caption title:
 optional body body:
@@ -242,8 +301,54 @@ optional string contact-url:
 boolean show-wrap: false
 width: fill
 
+--- home-desktop: $title
+body: $body
+sub-sections: $sub-sections
+toc: $toc
+current-section: $current-section
+avatar: $avatar
+contact-txt: $contact-txt
+contact-url: $contact-url
+show-wrap: $show-wrap
+if: not $is-mobile
+
+--- container: ftd.main
+
+--- home-mobile: $title
+body: $body
+sub-sections: $sub-sections
+toc: $toc
+current-section: $current-section
+avatar: $avatar
+contact-txt: $contact-txt
+contact-url: $contact-url
+show-wrap: $show-wrap
+if: $is-mobile
+
+
+
+
+
+
+
+
+
+
+-- ftd.column home-desktop:
+optional caption title:
+optional body body:
+fpm.toc-item list sub-sections:
+fpm.toc-item list toc:
+optional fpm.toc-item current-section:
+optional ftd.image-src avatar:
+optional string contact-txt:
+optional string contact-url:
+boolean show-wrap: false
+width: fill
+
 --- ftd.column:
 if: $sub-sections is not empty
+
 --- subsection-item: $obj.title
 $loop$: $sub-sections as $obj
 is-active: $obj.is-active
@@ -290,6 +395,7 @@ $show-wrap: $show-wrap
 
 
 
+
 -- ftd.column header-item-section: 
 caption title:
 optional ftd.image-src icon:
@@ -313,6 +419,16 @@ role: $fpm.type.copy-tight
 style: bold
 
 --- ftd.text: $title
+if: $is-mobile
+role: $fpm.type.copy-tight
+link: $link
+padding-left: 10
+color: $fpm.color.main.custom.two
+style: bold
+text-transform: capitalize
+
+--- ftd.text: $title
+if: not $is-mobile
 role: $fpm.type.copy-tight
 link: $link
 padding-left: 10
@@ -335,13 +451,23 @@ role: $fpm.type.copy-tight
 style: bold
 
 --- ftd.text: $title
-if: $link is null
-text-transform: capitalize
+if: $is-mobile
 role: $fpm.type.copy-tight
-white-space: nowrap
+link: $link
 padding-left: 10
 color: $fpm.color.main.custom.two
 style: bold
+text-transform: capitalize
+
+--- ftd.text: $title
+if: not $is-mobile
+role: $fpm.type.copy-tight
+link: $link
+padding-left: 10
+white-space: nowrap
+color: $fpm.color.main.custom.two
+style: bold
+text-transform: capitalize
 
 --- container: ftd.main
 
@@ -385,6 +511,18 @@ margin-right: 12
 --- container: fourth-container
 
 --- ftd.text: $title
+if: $is-mobile
+role: $fpm.type.copy-tight
+link: $link
+color: $fpm.color.main.custom.eight
+color if $is-active: $fpm.color.main.success.base
+color if $MOUSE-IN: $fpm.color.main.success.base
+background-color if $MOUSE-IN: $fpm.color.main.custom.eight
+border-bottom: 1
+border-color: $fpm.color.main.custom.eight
+
+--- ftd.text: $title
+if: not $is-mobile
 role: $fpm.type.copy-tight
 link: $link
 white-space: nowrap
@@ -414,9 +552,14 @@ margin-right: 12
 --- container: fourth-container
 
 --- ftd.text: $title
-if: $link is null
+if: not $is-mobile
 role: $fpm.type.copy-tight
 white-space: nowrap
+color: $fpm.color.main.success.base
+
+--- ftd.text: $title
+if: $is-mobile
+role: $fpm.type.copy-tight
 color: $fpm.color.main.success.base
 
 
@@ -492,8 +635,8 @@ style: bold
 optional caption title:
 optional string timestamp:
 optional body body:
-color: $fpm.color.main.text
 spacing: 16
+width: fill
 
 --- ftd.text: $title
 if: $title is not null
@@ -533,6 +676,239 @@ margin-bottom: 28
 
 
 
+
+-- ftd.column page-mobile:
+open: true
+id: page-container
+append-at: page-container
+boolean show-menu: false
+fpm.toc-item list sections:
+fpm.toc-item list sub-sections:
+fpm.toc-item list toc:
+optional caption title:
+optional body body:
+optional fpm.toc-item current-subsection:
+optional fpm.toc-item current-page:
+optional fpm.toc-item current-section:
+optional ftd.image-src avatar:
+optional string contact-txt:
+optional string contact-url:
+boolean show-wrap: false
+boolean is-margin: false
+align: center
+width: fill
+padding-horizontal: 14
+
+--- container: ftd.main
+
+--- ftd.column:
+width: fill
+id: first-container
+align: center
+padding-horizontal: 14
+
+--- ftd.column:
+align: center
+width: fill
+
+--- ftd.row:
+wrap: true
+width: fill
+
+--- header-mobile:
+sections: $sections
+$show-menu: $show-menu
+
+--- container: first-container
+
+--- ftd.row:
+width: fill
+padding-top: 28
+id: second-container
+wrap: true
+
+--- ftd.column:
+if: $avatar is not null
+width: fill
+
+--- ftd.image:
+src: $avatar
+width: 215
+
+--- ftd.text: $contact-txt
+role: $fpm.type.label-small
+color: $fpm.color.main.cta-tertiary.focused
+border-bottom: 1
+border-color: $fpm.color.main.cta-tertiary.focused
+padding-bottom: 4
+margin-top: 12
+link: $contact-url
+
+--- container: second-container
+
+--- ftd.column:
+width: fill
+id: third-container
+margin-top: 5
+
+--- ftd.text: $current-section.title
+if: $current-section.title is not null
+role: $fpm.type.label-big
+style: bold
+border-bottom: 8
+border-style: double 
+padding-bottom: 6
+text-transform: capitalize
+border-color: $fpm.color.main.custom.two
+color: $fpm.color.main.custom.two
+margin-bottom: 24
+
+--- ftd.text: $current-page.title
+if: $current-page.title is not null
+role: $fpm.type.label-big
+style: bold
+border-bottom: 8
+border-style: double 
+padding-bottom: 6
+text-transform: capitalize
+border-color: $fpm.color.main.custom.two
+color: $fpm.color.main.custom.two
+margin-bottom: 24
+
+--- container: third-container
+
+--- ftd.text:
+if:$body is not null
+width: fill
+text: $body
+role: $fpm.type.copy-tight
+color: $fpm.color.main.success.base
+margin-bottom: 26
+
+--- ftd.column:
+width: fill
+id: page-container
+min-height: calc 100vh - 315px
+
+--- container: first-container
+
+--- footer-card:
+is-margin: $is-margin
+
+
+
+
+
+
+
+
+
+
+-- ftd.row header-mobile:
+optional caption title:
+optional ftd.image-src site-logo:
+fpm.toc-item list sections: 
+string width: fill
+wrap: true
+
+--- ftd.image:
+src: $site-logo
+width: 19
+height: 32
+margin-top: -7
+;margin-right: 7
+
+--- header-item: $obj.title
+url: $obj.url
+is-active: $obj.is-active
+$loop$: $sections as $obj
+
+
+
+
+
+
+
+
+
+
+-- ftd.row header-item:
+caption title:
+string url:
+boolean is-active:
+
+--- ftd.row: 
+width: 6
+height: 1
+background-color: $fpm.color.main.text-strong
+align: center
+margin-left: 12
+margin-right: 12
+
+--- container: ftd.main
+
+--- ftd.text: $title
+role: $fpm.type.label-small
+color: $fpm.color.main.cta-tertiary.focused
+text-transform: capitalize
+border-bottom: 1
+border-color: $fpm.color.main.cta-tertiary.focused
+link: $url
+
+
+
+
+
+
+
+
+
+
+-- ftd.column home-mobile:
+optional caption title:
+optional body body:
+fpm.toc-item list sub-sections:
+fpm.toc-item list toc:
+optional fpm.toc-item current-section:
+optional ftd.image-src avatar:
+optional string contact-txt:
+optional string contact-url:
+boolean show-wrap: false
+
+--- ftd.column:
+if: $sub-sections is not empty
+
+--- subsection-item: $obj.title
+$loop$: $sub-sections as $obj
+is-active: $obj.is-active
+link: $obj.url
+
+--- container: ftd.main
+
+--- ftd.column:
+width: fill
+id: third-container
+
+--- ftd.column:
+wrap: true
+width: fill
+
+--- header-item-section: $obj.title
+$loop$: $toc as $obj
+is-active: $obj.is-active
+link: $obj.url
+children: $obj.children
+$show-wrap: $show-wrap
+
+
+
+
+
+
+
+
+
+
 -- ftd.column footer-card:
 width: fill
 border-top: 2
@@ -541,8 +917,6 @@ border-style: dashed
 border-color: $fpm.color.main.success.base
 padding-top: 32
 color: $fpm.color.main.success.base
-
-
 
 --- ftd.row:
 width: fill
@@ -562,9 +936,11 @@ width: fill
 
 --- ftd.text: \\>
 role: $fpm.type.copy-tight
+padding-right: 8
 
 --- ftd.text:
 text: $footer
 text-indent: 8
 role: $fpm.type.copy-tight
-margin-top: -16 
+text-align: justify
+margin-top: -16
