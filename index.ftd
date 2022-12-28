@@ -19,24 +19,11 @@ $processor$: sitemap
 
 -- string footer: 
 
-Lorem Ipsum is simply dummy text of the printing and typesetting in the 1960s 
-with the release of 
-
-Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-publishing software like Aldus
-
-PageMaker including versions of Lorem Ipsum.
-
+Lorem Ipsum is simply dummy text of the printing and typesetting in the 1960s
 
 -- ftd.image-src site-logo:
 dark: assets.files.static.logo.svg.dark
 light: assets.files.static.logo.svg.light
-
-
-
-
-
-
 
 -- page:
 avatar: $assets.files.static.avatar1.jpeg
@@ -71,8 +58,8 @@ boolean show-wrap: false
 boolean is-margin: false
 ftd.color backgroundcolor: $fpm.color.main.background.step-1
 background-color: $backgroundcolor
-padding-vertical: 14
-;min-height: fill
+padding-vertical if not $is-mobile: 14
+
 
 --- page-desktop: $title
 if: not $is-mobile
@@ -137,6 +124,8 @@ boolean show-wrap: false
 boolean is-margin: false
 align: center
 max-width: 980
+min-width: 980
+min-height: fill
 padding-horizontal: 14
 
 --- container: ftd.main
@@ -156,6 +145,7 @@ width: fill
 
 --- header:
 sections: $sections
+site-logo: $site-logo
 $show-menu: $show-menu
 
 --- container: first-container
@@ -697,27 +687,24 @@ boolean show-wrap: false
 boolean is-margin: false
 align: center
 width: fill
-padding-horizontal: 14
 
---- container: ftd.main
 
---- ftd.column:
+--- ftd.column: 
 width: fill
 id: first-container
-align: center
-padding-horizontal: 14
 
---- ftd.column:
-align: center
-width: fill
-
---- ftd.row:
-wrap: true
-width: fill
-
---- header-mobile:
+--- h.header:
 sections: $sections
-$show-menu: $show-menu
+sub-sections: $sub-sections
+toc: $toc
+current-section: $current-section
+current-subsection: $current-subsection
+current-page: $current-page
+site-name: Meenu Kumari
+logo-height: 38
+menu-right: 0
+menu-left: -88
+current-url: /home/
 
 --- container: first-container
 
@@ -726,6 +713,7 @@ width: fill
 padding-top: 28
 id: second-container
 wrap: true
+padding-horizontal: 14
 
 --- ftd.column:
 if: $avatar is not null
@@ -840,7 +828,7 @@ boolean is-active:
 --- ftd.row: 
 width: 6
 height: 1
-background-color: $fpm.color.main.text-strong
+background-color: $fpm.color.main.background.overlay
 align: center
 margin-left: 12
 margin-right: 12
