@@ -1,0 +1,10 @@
+-- import: fpm
+
+-- import: fifthtry.github.io/roboto-mono/assets as mono
+
+-- fpm.font-copy: $mono.fonts.Mono
+
+-- fpm.font-display: $mono.fonts.Mono
+
+-- fpm.font-code: $mono.fonts.Mono
+

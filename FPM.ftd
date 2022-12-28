@@ -5,13 +5,17 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/texty-ps/main
 
 -- fpm.dependency: fifthtry.github.io/doc-site as ds
 
+-- fpm.dependency: fifthtry.github.io/header as h
+
 -- fpm.auto-import: ds
+-- fpm.auto-import: h
 
 -- fpm.dependency: fifthtry.github.io/doc-site as ds
 -- fpm.dependency: fifthtry.github.io/resume
 -- fpm.dependency: fifthtry.github.io/caffeine-resume 
+-- fpm.dependency: fifthtry.github.io/roboto-mono
 
-
+-- fpm.auto-import: fifthtry.github.io/texty-ps/FPM/config
 
 
 -- fpm.sitemap:
