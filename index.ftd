@@ -22,8 +22,9 @@ $processor$: sitemap
 Lorem Ipsum is simply dummy text of the printing and typesetting in the 1960s
 
 -- ftd.image-src site-logo:
-dark: assets.files.static.logo.svg.dark
-light: assets.files.static.logo.svg.light
+light: $assets.files.static.logo2.svg.light
+dark: $assets.files.static.logo2.svg.dark
+
 
 -- page:
 avatar: $assets.files.static.avatar1.jpeg
@@ -219,7 +220,6 @@ margin-bottom: 26
 width: fill
 id: page-container
 min-height: calc 100vh - 315px
-
 
 --- container: first-container
 
@@ -697,6 +697,7 @@ id: first-container
 --- h.header:
 sections: $sections
 sub-sections: $sub-sections
+site-logo: $site-logo
 toc: $toc
 current-section: $current-section
 current-subsection: $current-subsection
