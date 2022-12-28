@@ -1,0 +1,127 @@
+string list servers-list:
+
+
+
+record tags:
+string name:
+string description:
+optional body summary:
+
+record schema:
+caption title:
+string url:
+
+
+
+record content-type:
+string title:
+record scheme:
+
+record content:
+
+
+
+-- tags list tag-list:
+
+record requestbody:
+string description:
+boolean required:
+
+
+-- record method-name:
+string record tags.name:
+body sumarry:
+optional body description:
+string operationid:
+
+-- string list tags-name:
+
+
+
+-- record methods:
+record method-name
+
+record path:
+string path-name:
+record methods:
+
+-- record apidata:
+string openapi:
+infodata info-data:
+server list servers-list:
+tags list tag-list:
+path paths:
+
+-- record infodata:
+caption title:
+decimal version:
+optional string termsofservice:
+optional string termsofserviceurl:
+
+-- record server:
+optional caption title:
+string url:
+
+
+
+-- record tags:
+string name:
+string description:
+optional body summary:
+
+
+-- apidata api-data:
+$processor$: get-data
+{
+	"openapi":"openapi",
+	"info-data":
+	{
+     "title":"hello",
+     "version": 9.0,
+	},
+	"servers-list":[
+     {
+     "url": /
+     }
+     ],
+     "tags-list":
+     [
+     {
+     "name":"aaa",
+     "descriptions":"jjjjjj"
+     },
+          {
+     "name":"aaaa",
+     "descriptions":"jjjjjj"
+     },
+          {
+     "name":"aaaaa",
+     "descriptions":"jjjjjj"
+     }
+     ],
+
+
+
+
+     "paths":
+     {
+     "path-name":"/kk",
+     "methods":
+     {
+      "method-name":
+      "name:"/put"
+      {
+       "tags-name":
+       [
+       "jjjj"],
+       "summary": "bjlkjbghjk",
+       "operationid":"hkjnb"
+
+      }
+     }
+     }
+
+	
+}
+
+

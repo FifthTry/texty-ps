@@ -1,0 +1,159 @@
+-- string list servers-list:
+
+
+
+
+-- record schema:
+string url:
+
+
+
+-- record contenttype:
+schema scheme:
+
+-- record contents:
+contenttype content-type:
+
+
+-- tags list tag-list:
+
+-- record requestbody:
+string description:
+contents content:
+boolean required:
+
+
+-- string list tags-name:
+
+
+-- record status:
+string desc:
+optional contents content:
+
+-- record responsebody:
+string desc:
+optional contents content:
+
+-- record methodname:
+string list tags-name:
+body summary:
+optional body description:
+string operationid:
+requestbody request-body:
+responsebody list responses:
+
+
+responses=
+[
+
+{ status: 200, dess: "dnn", contect:"  "}
+
+]
+
+
+-- record method:
+string name:
+methodname method-name:
+
+-- record path:
+string path-name:
+method methods:
+
+-- record infodata:
+caption title:
+decimal version:
+optional string termsofservice:
+optional string termsofserviceurl:
+
+-- record server:
+optional caption title:
+string url:
+
+
+
+-- record tags:
+string name:
+string description:
+optional body summary:
+
+
+-- record apidata:
+string openapi:
+optional infodata info-data:
+optional server list servers-list:
+optional tags list tag-list:
+optional path list paths:
+
+
+-- apidata api-data:
+$processor$: get-data
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.column documenatt:
+apidata api-data:
+width: fill
+background-color: $fpm.color.main.background.step-1
+
+--- ftd.text:ndbfmdfhr
+role: $fpm.type.heading-hero
+style: bold
+color: $fpm.color.main.text-strong
+
+
+--- ftd.row:
+background-color: $fpm.color.main.cta-secondary.base
+padding-vertical: 4
+padding-horizontal: 4
+
+--- ftd.text: PUT
+background-color: $fpm.color.main.custom.two
+padding-vertical: 4
+padding-horizontal: 4
+
+--- ftd.text: https://todos.stoplight.io/user
+role: $fpm.type.copy-tight
+
+--- container: ftd.main
+
+--- ftd.text: Update a single todo using an ID
+role: $fpm.type.copy-tight
+
+
+
+--- ftd.text: 
+role: $fpm.type.copy-tight
+
+Markdown is supported in descriptions. Add information here for users 
+to get accustomed to endpoints
+
+
+
+--- ftd.row:
+width: fill
+
+--- ftd.text: 400
+padding-vertical: 4
+padding-horizontal: 4
+color: $fpm.color.main.text-strong
+
+
+
+

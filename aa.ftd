@@ -1,0 +1,196 @@
+-- string list servers-list:
+
+
+
+
+-- record schema:
+string url:
+
+
+
+-- record contenttype:
+schema scheme:
+
+-- record contents:
+contenttype content-type:
+
+
+-- tags list tag-list:
+
+-- record requestbody:
+string description:
+contents content:
+boolean required:
+
+
+-- string list tags-name:
+
+
+
+-- record responsebody:
+caption key:
+string desc:
+optional contents content:
+
+
+-- record methodname:
+string list tags-name:
+body summary:
+optional body description:
+string operationid:
+requestbody request-body:
+responsebody list responses:
+
+
+
+-- record method:
+string name:
+methodname method-name:
+
+-- record path:
+string path-name:
+method methods:
+
+-- record infodata:
+caption title:
+decimal version:
+optional string termsofservice:
+optional string termsofserviceurl:
+
+-- record server:
+optional caption title:
+string url:
+
+
+
+-- record tags:
+string name:
+string description:
+optional body summary:
+
+
+-- record apidata:
+string openapi:
+optional infodata info-data:
+optional server list servers-list:
+optional tags list tag-list:
+optional path paths:
+
+
+-- apidata api-data:
+$processor$: get-data
+
+{
+     "openapi":"openapi",
+     "info": {
+          "title":"FTD OpenApi",
+          "termsofservice": "https://www.fifthtry.com/terms/",
+          "termsofserviceurl": "..."
+          "version": "9.0",
+          "contact": "info@fifthtry.com"
+          },
+     "servers":[
+          {
+               "url": "/"
+          }
+     ],
+    "tags": [
+          {
+               "name": "fifthtry",
+               "descriptions": "FifthTry is committed to protecting the privacy of our customers. FifthTry is a platform providing clients Service as a Software (["SaaS"]) solutions."
+          },
+          {
+               "name": "store",
+               "descriptions": "Everything about fifthtry"
+          },
+          {
+               "name": "user",
+               "descriptions": "Operations about user"
+          }
+     ],
+    "paths": {
+          "path-name": "/fifthtry",
+          "methods":
+               {
+                    "name": "put",
+                    "method-name":
+               {
+                    "tags":
+                    [
+                         "fifthtry"
+                    ],
+                    "summary": "Update an existing fifthtry",
+                    "operationid": "updatefifthtry",
+                    "description":"Update an existing fifthtry by Id",
+                    "responses": {
+                         "status": "200"
+                         {
+                         "desc":"Successful Response"
+                         }
+                    },
+                    "request-body": {
+                         "description":"Update fifthtry",
+                         "required":false,
+                         "content": {
+                              "content-type": {
+                                   "scheme": {
+                                        "url":"#/components/schemas/Fifthtry"
+                                   }
+                              }
+                         }
+                    },
+                    "responses": {
+                         "200":
+                         {
+                         "desc":"Successful Response",
+                         "content": {
+                                   "application/json": {
+                                        "schema": {
+                                             "$ref": "#/components/schemas/Fifthtry"
+                                        }
+                                   }
+                              },
+
+                         },
+                         "400":
+                         {
+                         "desc":"Successful Response",
+                         "content": {
+                                   "application/json": {
+                                        "schema": {
+                                             "$ref": "#/components/schemas/Fifthtry"
+                                        }
+                                   }
+                              },
+                              
+                         }
+                    },
+               }
+          }
+     }
+-- record typedefiniton:
+string type:
+boolean readonly:
+string description:
+integer minlen:
+integer maxleng:
+string format:
+boolean nullable:
+
+-- record properte:
+typedefiniton type-definiton:
+
+-- record schemeobject:
+string type:
+properte properties:
+string list required:
+string description:
+
+
+
+
+
+
+
+
+
