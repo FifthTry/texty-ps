@@ -5,15 +5,15 @@
 
 -- r.resume john-doe: 
 
--- john-doe.basic: Meenu Kumari
-label: Web Developer
-email: meenu@gmail.com
-phone: +91 9798744002
+-- john-doe.basic: John Deo
+label: Developer
+email: johm@email
+phone: +91 8788888888
 url: https://johndoe.com
 maritalStatus: Single
 dateOfBirth: 03-02-1998
-summary: I’m a full stack web developer who can build apps from the ground up. I've worked mostly at startups so I am use to wearing many hats. I am a very product focussed developer who priotizes user feedback first and foremost. I'm generally very flexible when investigating new roles.
-image: $assets.files.static.profile.jpg
+summary: I’m a developer who can build apps from the ground up. I've worked mostly at startups so I am use to wearing many hats. I am a very product focussed developer who priotizes user feedback first and foremost. I'm generally very flexible when investigating new roles.
+image: $assets.files.static.avatar.png
 
 -- john-doe.location: 2712 Broadway St
 postalCode: CA 94115

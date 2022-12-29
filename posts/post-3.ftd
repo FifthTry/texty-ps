@@ -17,7 +17,7 @@ PageMaker including versions of Lorem Ipsum.passages, and more recently with des
 PageMaker including versions of Lorem Ipsum.
 
 -- ds.image:
-src: $assets.files.static.back3.png
+src: $assets.files.static.image-placeholder.png
 width: fill
 
 Lorem Ipsum is simply dummy text of the printing and typesetting 

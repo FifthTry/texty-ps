@@ -20,8 +20,8 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/texty-ps/main
 
 -- fpm.sitemap:
 
-# Meenu: /
-nav-title: Meenu Kumari
+# John: /
+nav-title: John Deo
 
 ## Archmage of Infrastructure: /
 
@@ -32,12 +32,12 @@ nav-title: Meenu Kumari
   - Kubernetes:
 
 - Highlighted Projects: 
-  - Personal Portfolio: https://myportfoliocheck.netlify.app/
-  - Social Media: https://myportfoliocheck.netlify.app/
-  - Shopping App: https://myportfoliocheck.netlify.app/
-  - Game App: https://myportfoliocheck.netlify.app/
-  - E-commerce Website: https://myportfoliocheck.netlify.app/
-  - Tic Tac Toe: https://myportfoliocheck.netlify.app/
+  - Personal Portfolio: https://github.com/
+  - Social Media: https://github.com/
+  - Shopping App: https://github.com/
+  - Game App: https://github.com/
+  - E-commerce Website: https://github.com/
+  - Tic Tac Toe: https://github.com/
 
 - Quick Links: 
   - GitHub: https://github.com/
@@ -70,7 +70,7 @@ nav-title: Blog post
 nav-title: Contact Information
 
 - email :
-  - meenu@fifthtry.com:
+  - jonh@email:
 
 - Social Media:
   - GitHub 

@@ -15,19 +15,19 @@ if: $ftd.device == mobile
 -- fpm.sitemap-data sitemap:
 $processor$: sitemap
 
--- optional string copyright: Copyright 2012-2022 FifthTry (Meenu Kumari).
+-- optional string copyright: Copyright 2012-2022 FifthTry.
 
 -- string footer: 
 
 Lorem Ipsum is simply dummy text of the printing and typesetting in the 1960s
 
 -- ftd.image-src site-logo:
-light: $assets.files.static.logo2.svg.light
-dark: $assets.files.static.logo2.svg.dark
+light: $assets.files.static.avatar.png.light
+dark: $assets.files.static.avatar.png.dark
 
 
 -- page:
-avatar: $assets.files.static.avatar1.jpeg
+avatar: $assets.files.static.avatar.png
 contact-txt: Contact
 contact-url: /contact/
 id: page-id 
@@ -702,7 +702,6 @@ toc: $toc
 current-section: $current-section
 current-subsection: $current-subsection
 current-page: $current-page
-site-name: Meenu Kumari
 logo-height: 38
 menu-right: 0
 menu-left: -88
