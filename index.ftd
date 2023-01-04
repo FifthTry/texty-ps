@@ -39,7 +39,7 @@ contact-txt: Contact
 contact-url: /contact/
 id: page-id 
 
--- h3: Skills: 
+-- h3: Skills 
 
 - Go, Lua, Haskell, C, Rust and other languages:
 - Docker (deployment, development & more):
