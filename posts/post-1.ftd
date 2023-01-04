@@ -2,7 +2,8 @@
 -- import: fifthtry.github.io/texty-ps as ps
 -- import: fifthtry.github.io/texty-ps/assets
 
--- ps.page:
+-- ps.page: FTD document
+show-toc: false
 
 -- ps.article-card:
 timestamp: 20

@@ -1,7 +1,9 @@
 -- import: fpm
 -- import: fifthtry.github.io/texty-ps as ps
 -- import: fifthtry.github.io/texty-ps/assets
--- ps.page:
+
+-- ps.page: Gratitude and humility
+show-toc: false
 
 We learned about gratitude and humility - that so many people had a hand in our success, from the teachers who inspired us to the janitors who kept our school clean... and we were taught to value everyone's contribution and treat everyone with respect.
 
