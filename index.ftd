@@ -23,6 +23,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting in the 1960s
 
 -- optional string site-name: 
 
+-- string site-url: /
 
 
 
@@ -173,6 +174,7 @@ width: fill
 sections: $sections
 site-logo: $site-logo
 site-name: $site-name
+site-url: $site-url
 $show-menu: $show-menu
 
 --- container: first-container
@@ -297,6 +299,7 @@ is-margin: $is-margin
 optional caption title:
 fpm.toc-item list sections: 
 optional ftd.image-src site-logo:
+string site-url:
 optional string site-name:
 string width: fill
 
@@ -313,6 +316,7 @@ sections: $sections
 if: not $is-mobile
 site-logo: $site-logo
 sections: $sections
+site-url: $site-url
 site-name: $site-name
 
 --- header-mobile: $title
@@ -320,7 +324,7 @@ if: $is-mobile
 site-logo: $site-logo
 sections: $sections
 site-name: $site-name
-
+site-url: $site-url
 
 
 
@@ -334,11 +338,13 @@ site-name: $site-name
 optional caption title:
 optional ftd.image-src site-logo:
 optional string site-name:
+string site-url:
 fpm.toc-item list sections: 
 width: fill
 
 --- ftd.image:
 if: $site-logo is not null
+link: $site-url
 src: $site-logo
 width: 19
 height: 32
@@ -346,6 +352,7 @@ margin-top: -7
 ;margin-right: 7
 
 --- fallback-title:
+site-url: $site-url
 site-name: $site-name
 
 --- header-item: $obj.title
@@ -675,6 +682,7 @@ id: first-container
 sections: $sections
 site-logo: $site-logo
 site-name: $site-name
+site-url: $site-url
 
 --- container: first-container
 
@@ -806,6 +814,7 @@ is-margin: $is-margin
 optional caption title:
 optional ftd.image-src site-logo:
 optional string site-name:
+string site-url:
 fpm.toc-item list sections: 
 width: fill
 
@@ -839,7 +848,7 @@ margin-top: -7
 
 --- fallback-title:
 site-name: $site-name
-
+site-url: $site-url
 
 
 
@@ -928,16 +937,19 @@ margin-top: -16
 
 -- ftd.column fallback-title:
 optional caption site-name:
+string site-url:
 
 --- ftd.text: $site-name
 if: $site-name is not null
 role: $fpm.type.copy-tight
 color: $fpm.color.main.text-strong
+link: $site-url
 
 --- ftd.text: μ
 if: $site-name is  null
 role: $fpm.type.copy-tight
 color: $fpm.color.main.text-strong
+link: $site-url
 
 
 
