@@ -5,10 +5,9 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/texty-ps/main
 
 -- fpm.dependency: fifthtry.github.io/doc-site as ds
 
--- fpm.dependency: fifthtry.github.io/header as h
 
 -- fpm.auto-import: ds
--- fpm.auto-import: h
+
 
 -- fpm.dependency: fifthtry.github.io/doc-site as ds
 -- fpm.dependency: fifthtry.github.io/resume
@@ -20,24 +19,15 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/texty-ps/main
 
 -- fpm.sitemap:
 
-# Meenu: /
-nav-title: Meenu Kumari
-
-## Archmage of Infrastructure: /
-
-- Skills: 
-  - Go, Lua, Haskell, C, Rust and other languages:
-  - Docker (deployment, development & more):
-  - Mashups of data:
-  - Kubernetes:
+# Home: /
 
 - Highlighted Projects: 
-  - Personal Portfolio: https://myportfoliocheck.netlify.app/
-  - Social Media: https://myportfoliocheck.netlify.app/
-  - Shopping App: https://myportfoliocheck.netlify.app/
-  - Game App: https://myportfoliocheck.netlify.app/
-  - E-commerce Website: https://myportfoliocheck.netlify.app/
-  - Tic Tac Toe: https://myportfoliocheck.netlify.app/
+  - Personal Portfolio: https://github.com/
+  - Social Media: https://github.com/
+  - Shopping App: https://github.com/
+  - Game App: https://github.com/
+  - E-commerce Website: https://github.com/
+  - Tic Tac Toe: https://github.com/
 
 - Quick Links: 
   - GitHub: https://github.com/
@@ -46,8 +36,7 @@ nav-title: Meenu Kumari
 
 
 
-# blog: /blog/
-nav-title: Blog post
+# Blog: /blog/
 
 - all post:
   - N01 15 2022 - You are enough: /posts/post-1/
@@ -66,30 +55,23 @@ nav-title: Blog post
   - N06 30 2022 - More Than a Body: /posts/post-2/
   - N06 30 2022 - Brave, Not Perfect: /posts/post-3/
 
-# contact: /contact/
-nav-title: Contact Information
+# Contact: /contact/
 
 - email :
-  - meenu@fifthtry.com:
+  - info@email: 
+  url: https://www.fifthtry.com/
 
 - Social Media:
   - GitHub 
-  url: https://github.com/
+  url: https://github.com/fifthtry
   - LinkedIN
-  url: https://in.linkedin.com/
-  - Patreon
-  url: https://www.patreon.com/
+  url: https://www.linkedin.com/company/fifthtry/
   - Twitter
-  url: https://twitter.com/login
+  url: https://twitter.com/FifthTryHQ
   - Discord
-  url: https://discord.com/
-  - Telegram
-  url: https://discord.com/
+  url: https://discord.gg/gRfDbRpB52
 
 
-- Other information:
-
-- Discord:
 
 # Resume: /resume/
 
@@ -115,7 +97,7 @@ nav-title: Contact Information
 
 
 # About: /about/
-nav-title: About Me
+
 
 - About Me:
   - N01 15 2022 - You are enough: /posts/post-1/
@@ -126,6 +108,12 @@ nav-title: About Me
   - N06 30 2022 - It Ends With Us: /posts/post-3/
 
 
-# Essay: /posts/post-1/
-nav-title: Essays
+# Essays: /essays/
 
+- All Essays:
+  - N01 15 2022 - You are enough: /posts/post-1/
+  - N01 04 2022 - Coffee shop in winter:/posts/post-2/
+  - N07 24 2022 - Clean communities, healthy citizens.: /posts/post-3/
+  - N07 07 2022 - Good Life, Good Vibes: /posts/post-1/
+  - N06 30 2022 - The Power of Positive Thinking: /posts/post-2/
+  - N06 30 2022 - It Ends With Us: /posts/post-3/
