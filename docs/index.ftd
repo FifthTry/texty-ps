@@ -1,0 +1,23 @@
+-- import: fifthtry.github.io/texty-ps as ps
+
+-- ps.page: Introduction to `texty-ps`
+
+FTD `texty-ps` helps you to create your personal blog or site with ease. Perfect 
+for the personal site of techies. This `ps`(Personal site) template uses `Roboto-mono`
+[monospaced font from `Roboto`](https://fifthtry.github.io/roboto-mono/) font 
+family. Its unique look and feel attracts tech gigs. 
+
+FTD `ps` can be applied to your websites easily. We recommend you first go through
+our [FPM template documentation](https://fpm.dev/author/create-on-github/).
+
+Create your first FPM project GitHub repository using our [FPM template](https://github.com/ftd-lang/fpm-template). 
+
+Now follow below given steps to start using this `texty-ps` template:
+
+Add below lines to FPM.ftd file:
+
+-- ds.code:
+lang: ftd
+
+\-- fpm.dependency: fifthtry.github.io/texty-ps as ps
+\-- fpm.auto-import: ps
