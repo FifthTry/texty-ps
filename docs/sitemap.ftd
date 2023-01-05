@@ -1,0 +1,83 @@
+-- import: fifthtry.github.io/texty-ps as ps
+
+-- ps.page: Updating sitemap links
+
+To navigate between pages you need to keep updating the sitemap of your `ps`. In `ps`
+we have added a sitemap into the `FPM.ftd` file.
+
+Each new file you create if you want to add it to the main menu(Top navigation) then 
+use below code sample.
+
+Let's say you have created a new `about-me.ftd` file into the `<root>` folder of your
+FTD web project then add it into the `fpm.sitemap` component.
+
+Add the below line into the `FPM.ftd` folder. Ensure `-- fpm.sitemap:` should be called 
+only one time.
+
+-- ds.code:
+lang: ftd
+
+\-- fpm.sitemap:
+
+# Home: index.html
+
+# About me: /about-me/
+
+
+-- ps.h2: Accessing a folder into sitemap:
+
+If you have created a folder for your blog posts named `blog` into the `<root>`
+folder of your project like `<your-ftd-project>/blog/` and added a `first-post.ftd`
+file into it.
+
+Each folder you create, we recommend adding an `index.ftd` file into it, to access 
+folder into `fpm.sitemap` by default.
+
+Adding your `blog` folder into `fpm.sitemap` inside `FPM.ftd` file:
+
+-- ds.code:
+lang: ftd
+
+\-- fpm.sitemap:
+
+# Home: index.html
+
+# About me: /about-me/
+
+# Blog: /blog/
+
+- Blog posts:
+  - My First Post: /blog/first-post/
+
+
+-- ps.h2: `TOC` into page using sitemap
+
+You can use `fpm.sitemap` for table of contents also. To create TOC of your `ps`
+into `FPM.ftd` using sitemap follow below given pattern. 
+
+Showing example of our `Documentation` page TOC:
+
+-- ds.code:
+lang: ftd
+
+\-- fpm.sitemap:
+
+# Home: index.html
+
+# About me: /about-me/
+
+# Documentation: /docs/
+
+- Documentation:
+  - Using `ps.page`: /docs/page/
+  - Updating `FPM.ftd` sitemap links: /docs/sitemap/
+  - Updating your resume: /docs/resume/
+  - Using typography: /docs/typography/
+  - Updating Footer info: /docs/footer/
+
+-- ds.markdown:
+
+Output of above, see below toc of our documentation page. TOC appears above 
+footer of your `ps`.
+
+

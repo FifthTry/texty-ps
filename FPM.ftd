@@ -15,11 +15,11 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/texty-ps/main
 -- fpm.dependency: fifthtry.github.io/roboto-mono
 
 -- fpm.auto-import: fifthtry.github.io/texty-ps/FPM/config
-
+-- fpm.auto-import: fpm
 
 -- fpm.sitemap:
 
-# Home: /
+# Home: index.html
 
 - Highlighted Projects: 
   - Personal Portfolio: https://github.com/
@@ -99,7 +99,7 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/texty-ps/main
 # About: /about/
 
 
-- About Me:
+- About my work:
   - N01 15 2022 - You are enough: /posts/post-1/
   - N01 04 2022 - Coffee shop in winter:/posts/post-2/
   - N07 24 2022 - Clean communities, healthy citizens.: /posts/post-3/
@@ -117,3 +117,12 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/texty-ps/main
   - N07 07 2022 - Good Life, Good Vibes: /posts/post-1/
   - N06 30 2022 - The Power of Positive Thinking: /posts/post-2/
   - N06 30 2022 - It Ends With Us: /posts/post-3/
+
+# Documentation: /docs/
+
+- Documentation:
+  - Using `ps.page`: /docs/page/
+  - Updating `FPM.ftd` sitemap links: /docs/sitemap/
+  - Updating your resume: /docs/resume/
+  - Using typography: /docs/typography/
+  - Updating Footer info: /docs/footer/

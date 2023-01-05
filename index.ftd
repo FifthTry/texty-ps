@@ -961,8 +961,8 @@ link: $site-url
 
 
 -- ftd.column h1:
-caption title:
-body body:
+optional caption title:
+optional body body:
 width: fill
 
 --- ftd.row:
@@ -979,14 +979,17 @@ padding-left: 10
 color: $fpm.color.main.custom.two
 style: bold
 text-transform: capitalize
+margin-bottom if $body is null: 20
 
 --- container: ftd.main
 
 --- ftd.text: 
+if: $body is not null
 text: $body
 role: $fpm.type.copy-relaxed
 color: $fpm.color.main.success.base
 margin-bottom: 20
+margin-top: 10
 
 
 
@@ -998,8 +1001,8 @@ margin-bottom: 20
 
 
 -- ftd.column h2:
-caption title:
-body body:
+optional caption title:
+optional body body:
 width: fill
 
 --- ftd.row:
@@ -1016,18 +1019,30 @@ padding-left: 10
 color: $fpm.color.main.custom.two
 style: bold
 text-transform: capitalize
+margin-bottom if $body is null: 20
 
 --- container: ftd.main
 
---- ftd.text: 
+--- ftd.text:
+if: $body is not null
 text: $body
 role: $fpm.type.copy-relaxed
 color: $fpm.color.main.success.base
 margin-bottom: 24
+margin-top: 10
+
+
+
+
+
+
+
+
+
 
 -- ftd.column h3:
-caption title:
-body body:
+optional caption title:
+optional body body:
 width: fill
 
 --- ftd.row:
@@ -1044,14 +1059,17 @@ padding-left: 10
 color: $fpm.color.main.custom.two
 style: bold
 text-transform: capitalize
+margin-bottom if $body is null: 20
 
 --- container: ftd.main
 
---- ftd.text: 
+--- ftd.text:
+if: $body is not null 
 text: $body
 role: $fpm.type.copy-relaxed
 color: $fpm.color.main.success.base
 margin-bottom: 24
+margin-top: 10
 
 
 

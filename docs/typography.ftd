@@ -1,0 +1,63 @@
+-- import: fifthtry.github.io/texty-ps as ps
+
+-- ps.page: Using typography
+
+In our `ps` we have added 3 level heading components. `ps.h1`, `ps.h2`, `ps.h3`
+
+How to use our heading components:
+
+-- ds.code: Using heading level 1 `ps.h1`
+lang: ftd
+
+\-- ps.h1: Heading Level 1
+
+This is heading level 1 body part. You can add multiple paragraphs into body part
+of a heading level 1
+
+
+-- ds.markdown: 
+
+Output of above:
+
+-- ps.h1: Heading Level 1
+
+This is heading level 1 body part. You can add multiple paragraphs into body part
+of a heading level 1
+
+
+-- ds.code: Using heading level 2 `ps.h2`
+lang: ftd
+
+\-- ps.h2: Heading Level 2
+
+This is heading level 2 body part. You can add multiple paragraphs into body part
+of a heading level 2
+
+
+-- ds.markdown: 
+
+Output of above:
+
+-- ps.h2: Heading Level 2
+
+This is heading level 2 body part. You can add multiple paragraphs into body part
+of a heading level 2
+
+
+-- ds.code: Using heading level 3 `ps.h3`
+lang: ftd
+
+\-- ps.h3: Heading Level 3
+
+This is heading level 3 body part. You can add multiple paragraphs into body part
+of a heading level 3
+
+
+-- ds.markdown: 
+
+Output of above:
+
+-- ps.h3: Heading Level 3
+
+This is heading level 3 body part. You can add multiple paragraphs into body part
+of a heading level 3
