@@ -2,7 +2,8 @@
 -- import: fifthtry.github.io/texty-ps as ps
 -- import: fifthtry.github.io/texty-ps/assets
 
--- ps.page:
+-- ps.page: FTD document
+show-toc: false
 
 -- ps.article-card:
 timestamp: 20
@@ -57,7 +58,7 @@ Using the code given above we can show the image as given below.
 
 
 -- ds.image: This is the image with caption
-src: $assets.files.static.back1.png
+src: $assets.files.static.image-placeholder.png
 width: fill
 
 Lorem Ipsum is simply dummy text of the printing and typesetting 
