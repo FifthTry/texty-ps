@@ -924,7 +924,6 @@ text: $footer
 text-indent: 1
 role: $fpm.type.copy-tight
 text-align: justify
-margin-top: -16
 
 
 
