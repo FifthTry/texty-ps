@@ -1,23 +1,18 @@
--- import: fpm
+-- import: fastn
 
--- fpm.package: fifthtry.github.io/texty-ps
-download-base-url: https://raw.githubusercontent.com/fifthtry/texty-ps/main
+-- fastn.package: fifthtry.github.io/texty-ps
 
--- fpm.dependency: fifthtry.github.io/doc-site as ds
+-- fastn.dependency: fastn-community.github.io/doc-site as doc-site
+-- fastn.dependency: fifthtry.github.io/resume
+-- fastn.dependency: fifthtry.github.io/caffeine-resume
+-- fastn.dependency: fifthtry.github.io/roboto-mono
 
+-- fastn.auto-import: fifthtry.github.io/texty-ps/FASTN/ds
+-- fastn.auto-import: fifthtry.github.io/texty-ps/assets
+-- fastn.auto-import: fifthtry.github.io/texty-ps/common
+-- fastn.auto-import: doc-site
 
--- fpm.auto-import: ds
-
-
--- fpm.dependency: fifthtry.github.io/doc-site as ds
--- fpm.dependency: fifthtry.github.io/resume
--- fpm.dependency: fifthtry.github.io/caffeine-resume 
--- fpm.dependency: fifthtry.github.io/roboto-mono
-
--- fpm.auto-import: fifthtry.github.io/texty-ps/FPM/config
--- fpm.auto-import: fpm
-
--- fpm.sitemap:
+-- fastn.sitemap:
 
 # Home: index.html
 
@@ -73,7 +68,7 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/texty-ps/main
 
 
 
-# Resume: /resume/
+;;# Resume: /resume/
 
 
 # Talks: /talks/

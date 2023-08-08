@@ -28,4 +28,4 @@ Maintained and updated by John Doe.
 dark: $assets.files.static.logo.png.dark
 light: $assets.files.static.logo.png.light
 
-
+-- end: ps.page
