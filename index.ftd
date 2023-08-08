@@ -56,7 +56,7 @@ description if { page.document-description == NULL }: $page.title
 og-image: $page.document-image
 
 -- ftd.column:
-background.solid: $inherited.colors.background.step-1
+background.solid: $inherited.colors.background.base
 width: fill-container
 
 -- ftd.desktop:
@@ -146,7 +146,7 @@ children wrapper:
 -- ftd.column:
 width: fill-container
 padding-bottom.px: 24
-background.solid: $inherited.colors.background.overlay
+background.solid: $inherited.colors.background.base
 
 -- ftd.column:
 align-self: center
@@ -559,6 +559,30 @@ is-active: $obj.is-active
 
 -- end: ftd.row
 
+-- ftd.row:
+align-content: center
+margin-left.px: 12
+
+-- ftd.image:
+if: { ftd.dark-mode }
+src: $assets.files.static.light-icon.svg
+width.fixed.px: 28
+height.fixed.px: 28
+border-radius.px: 100
+padding.px: 2
+$on-click$: $ftd.enable-light-mode()
+
+-- ftd.image:
+if: { !ftd.dark-mode }
+src: $assets.files.static.dark-icon.svg
+width.fixed.px: 28
+height.fixed.px: 28
+border-radius.px: 100
+padding.px: 2
+$on-click$: $ftd.enable-dark-mode()
+
+-- end: ftd.row
+
 -- end: ftd.row
 
 -- end: ftd.column
@@ -609,7 +633,7 @@ if: { !header-item.is-active }
 role: $inherited.types.copy-small
 link if { header-item.link != NULL }: $header-item.link
 white-space: nowrap
-color: $inherited.colors.background.step-1
+color: $inherited.colors.text
 border-bottom-width.px: 1
 border-color: $inherited.colors.border-strong
 
@@ -618,7 +642,7 @@ if: { header-item.is-active }
 role: $inherited.types.copy-small
 white-space: nowrap
 link if { header-item.link != NULL }: $header-item.link
-color: $inherited.colors.background.step-1
+color: $inherited.colors.custom.two
 style: bold
 border-bottom-width.px: 1
 border-color: $inherited.colors.border-strong
@@ -798,7 +822,7 @@ optional string site-name:
 if: { fallback-title.site-name == NULL }
 role: $inherited.types.copy-small
 role if { ftd.device == "mobile" }: $inherited.types.copy-large
-color: $inherited.colors.background.step-1
+color: $inherited.colors.text-strong
 
 -- end: ftd.row
 
