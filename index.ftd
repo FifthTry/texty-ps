@@ -80,9 +80,9 @@ is-margin: $page.is-margin
 
 -- end: ftd.desktop
 
-/-- ftd.mobile:
+-- ftd.mobile:
 
-/-- doc-page-mobile: $page.title
+-- page-mobile: $page.title
 toc: $page.toc
 wrapper: $page.wrapper
 sections: $page.sections
@@ -169,7 +169,7 @@ width: fill-container
 
 -- header:
 sections: $page-desktop.sections
-menu-icon: $assets.files.static.hamburger.svg
+menu-icon: $assets.files.assets.hamburger.svg
 
 -- end: ftd.column
 
@@ -290,9 +290,176 @@ info: $common.info
 
 
 
+
+-- component page-mobile:
+caption title:
+optional boolean show-menu:
+pr.toc-item list sections:
+pr.toc-item list sub-sections:
+pr.toc-item list toc:
+optional body body:
+optional boolean show-toc:
+optional pr.toc-item current-section:
+optional pr.toc-item current-subsection:
+optional pr.toc-item current-page:
+optional ftd.image-src avatar:
+optional string contact-txt:
+optional string contact-url:
+optional boolean show-wrap:
+boolean show-footer: false
+ftd.ui list footer:
+optional boolean is-margin:
+children wrapper:
+
+-- ftd.column:
+width: fill-container
+padding-bottom.px: 24
+background.solid: $inherited.colors.background.overlay
+
+-- ftd.column:
+align-self: center
+max-width.fixed.px: $common.max-width
+width: fill-container
+min-height.fixed.calc: 100vh - 29px
+height: fill-container
+
+-- ftd.column:
+width: fill-container
+padding-horizontal.px: 14
+align-content: center
+max-width: fill-container
+
+-- ftd.column:
+align-content: center
+max-width.fixed.px: $common.max-width
+width: fill-container
+
+-- header:
+sections: $page-mobile.sections
+menu-icon: $assets.files.assets.hamburger.svg
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+padding-top.px: 28
+spacing.fixed.px: 12
+
+-- ftd.column:
+
+-- ftd.column:
+if: { page-mobile.avatar != NULL }
+width.fixed.percent: 34
+
+-- ftd.image:
+src: $page-mobile.avatar
+width.fixed.px: 231
+height: auto
+
+-- ftd.text: $page-mobile.contact-txt
+role: $inherited.types.copy-small
+color: $inherited.colors.cta-tertiary.focused
+border-bottom-width.px: 1
+border-color: $inherited.colors.cta-tertiary.focused
+padding-bottom.px: 4
+margin-top.px: 12
+link: $page-mobile.contact-url
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+min-height.fixed.calc: 100vh - 198px
+
+-- ftd.text: $page-mobile.title
+if: {page-mobile.title != NULL }
+color: $inherited.colors.custom.two
+margin-bottom.px: 26
+role: $inherited.types.label-large
+style: bold
+border-bottom-width.px: 8
+border-style: double 
+padding-bottom.px: 6
+text-transform: capitalize
+border-color: $inherited.colors.custom.two
+
+-- ftd.text:
+if:{ page-mobile.body != NULL }
+width: fill-container
+role: $inherited.types.copy-small
+color: $inherited.colors.success.base
+margin-bottom.px: 26
+
+$page-mobile.body
+
+-- ftd.column:
+width: fill-container
+children: $page-mobile.wrapper
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { page-mobile.show-toc && !page-mobile.show-wrap }
+
+-- header-item-section: $obj.title
+$loop$: $page-mobile.toc as $obj
+is-active: $obj.is-active
+link: $obj.url
+children: $obj.children
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.column:
+if: {page-mobile.show-wrap}
+width: fill-container
+
+-- ftd.column:
+wrap: true
+height.fixed.px: 400
+width.fixed.percent: 48
+
+-- header-item-section: $obj.title
+$loop$: $page-mobile.toc as $obj
+is-active: $obj.is-active
+link: $obj.url
+children: $obj.children
+show-wrap: $page-mobile.show-wrap
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- footer:
+is-margin: $page-mobile.is-margin
+copyright: $common.copyright
+info: $common.info
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: page-mobile
+
+
+
+
+
+
+
+
+
+
 -- component header:
 pr.toc-item list sections:
-ftd.image-src menu-icon: $assets.files.static.hamburger.svg 
+ftd.image-src menu-icon: $assets.files.assets.hamburger.svg 
 boolean $sidebar-open: false
 optional ftd.image-src site-logo:
 string site-url: /
@@ -301,38 +468,23 @@ optional string site-name:
 -- ftd.column:
 width: fill-container
  
--- ftd.column:
-if: { header.sidebar-open }
-width: fill-container
-background.solid: $inherited.colors.background.overlay
-height.fixed.calc: 100vh
-z-index: 10
+-- ftd.mobile:
 
--- mobile-sidebar:
-if: { header.sidebar-open }
+-- header-mobile: $header.site-name
+site-url: $header.site-url
+menu-icon: $header.menu-icon
 $sidebar-open: $header.sidebar-open
 
--- end: ftd.column
-
-/-- menu-mobile:
-if: { header.sidebar-open }
-menu-icon: $header.menu-icon
-sections: $header.sections
-sub-sections: $header.sub-sections
-
-/-- ftd.mobile:
-
-/-- header-mobile:
-$sidebar-open: $header.sidebar-open
-menu-icon: $header.menu-icon
-sections: $header.sections
-sub-sections: $header.sub-sections
-toc: $header.toc
-current-section: $header.current-section
-current-page: $header.current-page
-current-subsection: $header.current-subsection
+-- end: header-mobile
 
 -- end: ftd.mobile
+
+-- menu-mobile:
+if: { header.sidebar-open }
+site-logo: $header.site-logo
+site-url: $header.site-url 
+site-name: $header.site-name
+sections: $header.sections
 
 -- ftd.desktop:
 
@@ -485,208 +637,45 @@ border-color: $inherited.colors.border-strong
 
 
 -- component header-mobile:
-ftd.image-src menu-icon:
-boolean $sidebar-open: false
-optional ftd.image-src site-logo:
+optional caption site-name:
 string site-url: 
+boolean $sidebar-open: false
 boolean $show-section: false
-optional string site-name:
 pr.toc-item list sections:
-pr.toc-item list sub-sections:
 pr.toc-item list toc:
-optional pr.toc-item current-subsection: 
-optional pr.toc-item current-section: 
-optional pr.toc-item current-page:
-integer logo-width: 120
-integer logo-height: 38
-boolean github-icon: false
-optional string github-url:
-boolean blog: false
+optional pr.toc-item current-section:
+ftd.image-src menu-icon:
 
 -- ftd.column: 
 width: fill-container
-background.solid: $inherited.colors.background.step-1
 $on-click-outside$: $ftd.set-bool($a = $header-mobile.show-section, v = false)
+$on-click-outside$: $ftd.set-bool($a = $header-mobile.sidebar-open, v = false)
+z-index: 999
 
 -- ftd.row:
-padding-horizontal.px: 16
 padding-vertical.px: 16
 width: fill-container
-align-content: center
-
--- ftd.column:
-
--- ftd.row:
-width: fill-container
-spacing.fixed.px: 16
+spacing.fixed.px: 12
 
 -- ftd.image:
 src: $header-mobile.menu-icon
-width.fixed.px: 24
-align-self: center
-$on-click$: $ftd.toggle($a = $header-mobile.sidebar-open) 
-
--- ftd.column:
-if: { header-mobile.site-logo != NULL } 
-height.fixed.px: 38
-
--- ftd.image:
-src: $header-mobile.site-logo
-height.fixed.px: 44
-
--- end: ftd.column
+$on-click$: $ftd.toggle($a = $header-mobile.sidebar-open)
+width.fixed.px: 32
+height.fixed.px: 32
 
 -- ftd.text: $header-mobile.site-name
 if: { header-mobile.site-name != NULL }
-role: $inherited.types.copy-large
+role: $inherited.types.copy-regular
 color: $inherited.colors.text-strong
-white-space: nowrap
-align-self: center
+link: $header-mobile.site-url
+background.solid: $inherited.colors.cta-primary.text
+padding.px: 12
+text-align: center
+style: bold
 
 -- fallback-title:
-if: { header-mobile.site-logo == NULL }
+if: { header-mobile.site-name == NULL }
 site-name: $header-mobile.site-name
-
--- end: ftd.row
-
--- end: ftd.row
-
--- ftd.row:
-width: fill-container
-background.solid: $inherited.colors.background.step-1
-
--- ftd.row:
-width: fill-container
-
--- ftd.row:
-align-self: start
-
--- ftd.text: $header-mobile.current-section.title
-if: { header-mobile.current-section != NULL }
-role: $inherited.types.label-large
-color: $inherited.colors.cta-tertiary.text
-link: $header-mobile.current-section.url
-background.solid: $inherited.colors.cta-tertiary.base
-padding-vertical.px: 8
-padding-horizontal.px: 8
-width: fill-container
-white-space: nowrap
-
--- end: ftd.row
-
--- ftd.row:
-width: fill-container
-spacing.fixed.px: 8
-padding-top.px: 8
-overflow-x: auto
-
--- header-item-mobile-view: $obj.title
-$loop$: $header-mobile.sub-sections as $obj
-children: $obj.children 
-is-active: $obj.is-active 
-link: $obj.url
-
--- end: ftd.row
-
--- end: ftd.row
-
--- ftd.row:
-if: { !ftd.is_empty($header-mobile.toc) }
-width: fill-container
-background.solid: $inherited.colors.background.step-2
-padding-horizontal.px: 20
-$on-click$: $ftd.toggle($a = $header-mobile.show-section, v = true)
-
--- ftd.row:
-width: fill-container
-padding-vertical.px: 16
-spacing.fixed.px: 6
-
--- ftd.text: $header-mobile.current-subsection.title
-if: { header-mobile.current-subsection != NULL }
-role: $inherited.types.label-large
-color: $inherited.colors.text-strong
-white-space: nowrap
-
--- ftd.text: Menu
-if: { header-mobile.current-subsection == NULL && header-mobile.current-page == NULL }
-role: $inherited.types.label-small
-color: $inherited.colors.text-strong
-white-space: nowrap
-
--- ftd.row:
-if: { header-mobile.current-subsection != NULL }
-
--- ftd.row:
-if: { header-mobile.current-page != NULL }
-
--- ftd.text: ->
-role: $inherited.types.label-large
-color: $inherited.colors.text-strong
-white-space: nowrap
-
--- end: ftd.row
-
--- end: ftd.row
-
--- ftd.text: $header-mobile.current-page.title 
-if: { header-mobile.current-page != NULL }
-role: $inherited.types.label-large
-color: $inherited.colors.text-strong
-white-space: nowrap
-
--- end: ftd.row
-
--- ftd.row:
-align-self: end
-height: fill-container
-
--- ftd.row:
-align-self: center
-width: fill-container
-
--- ftd.image: 
-if: { !header-mobile.show-section }
-src: $assets.files.static.down-arrow-dark.svg
-height: hug-content
-width.fixed.px: 12
-
--- ftd.image: 
-if: { header-mobile.show-section }
-src: $assets.files.static.up-arrow-dark.svg
-width.fixed.px: 12
-
--- end: ftd.row
-
--- end: ftd.row
-
--- ftd.column: 
-if: { header-mobile.show-section }
-width: fill-container
-anchor: parent
-background.solid: $inherited.colors.background.step-2
-top.px: 48
-left.px: 0
-z-index: 999
-max-height.fixed.px: 300
-overflow-y: auto
-
--- ftd.column:
-width: fill-container
-spacing.fixed.px: 8
-padding-vertical.px: 12
-padding-horizontal.px: 24
-overflow-x: auto
-
--- header-toc-item-mobile-view: $obj.title
-$loop$: $header-mobile.toc as $obj
-children: $obj.children 
-is-active: $obj.is-active
-link: $obj.url
-
--- end: ftd.column
-
--- end: ftd.column
 
 -- end: ftd.row
 
@@ -703,120 +692,6 @@ link: $obj.url
 
 
 
--- component header-toc-item-mobile-view:
-caption title:
-optional string link:
-pr.toc-item list children: 
-optional ftd.image-src icon:
-boolean is-active: 
-boolean $open: false
-
--- ftd.column: 
-$on-click$: $ftd.toggle($a = $header-toc-item-mobile-view.open)
-$on-click-outside$: $ftd.set-bool($a = $header-toc-item-mobile-view.open, v = false)
-
--- ftd.text: $header-toc-item-mobile-view.title
-link if { header-toc-item-mobile-view.link != NULL }: $header-toc-item-mobile-view.link
-role: $inherited.types.copy-small
-white-space: nowrap
-padding-left.px: 10
-color: $inherited.colors.text
-color if { header-toc-item-mobile-view.is-active }: $inherited.colors.cta-primary.base 
-
--- show-children-mobile:
-if: { !ftd.is_empty(header-toc-item-mobile-view.children) }
-children: $header-toc-item-mobile-view.children
-
--- end: ftd.column
-
--- end: header-toc-item-mobile-view
-
-
-
-
-
-
-
-
-
-
--- component show-children-mobile:
-pr.toc-item list children:
-
--- ftd.column:
-if: { !ftd.is_empty(show-children-mobile.children) }
-padding.px: 5
-padding-left.px: 15
-
--- links-mobile:
-obj: $obj
-$loop$: $show-children-mobile.children as $obj
-
--- end: ftd.column
-
--- end: show-children-mobile
-
-
-
-
-
-
-
-
-
-
--- component links-mobile:
-pr.toc-item obj:
-
--- ftd.column:
-width: fill-container
-
--- ftd.text: $links-mobile.obj.title
-link if { links-mobile.obj.url != NULL }: $links-mobile.obj.url
-color: $inherited.colors.text
-padding-vertical.px: 8
-padding-horizontal.px: 10
-role: $inherited.types.copy-small
-width: fill-container
-opacity if { !links-mobile.obj.is-active }: 0.6
-
--- end: ftd.column
-
--- end: links-mobile
-
-
-
-
-
-
-
-
-
-
--- component mobile-sidebar:
-boolean $sidebar-open:
-
--- ftd.column:
-anchor: window
-top.px: 0
-bottom.px: 0
-left.px: 0
-right.px: 0
-background.solid: $inherited.colors.background.overlay
-z-index: 1
-$on-click$: $ftd.toggle($a = $mobile-sidebar.sidebar-open)
-
--- ftd.image:
-src: $assets.files.static.cross.svg
-height.fixed.px: 24
-width: hug-content
-anchor: window
-right.px: 16
-top.px: 20
-
--- end: ftd.column
-
--- end: mobile-sidebar
 
 
 
@@ -828,34 +703,27 @@ top.px: 20
 
 
 -- component menu-mobile:
-optional ftd.image-src site-logo:
 optional string site-name:
-ftd.image-src menu-icon:
-string site-url: 
+optional ftd.image-src site-logo:
+string site-url:
 pr.toc-item list sections:
 boolean $show-section: false
-pr.toc-item list sub-sections:
-integer logo-width: 120
-integer logo-height: 44
-boolean github-icon: 
-optional string github-url: 
 
 -- ftd.column:
 width.fixed.calc: 100% - 48px
-height.fixed.calc: 100vh - 0px
+height: fill-container
 anchor: window
 left.px: 0
 top.px: 0
 overflow-y: auto
-padding-top.px: 20
+padding-vertical.px: 20
 padding-horizontal.px: 24
-background.solid: $inherited.colors.background.step-1
-z-index: 14
+background.solid: $inherited.colors.background.step-2
+z-index: 999999
 
 -- ftd.column:
 if: { !ftd.is_empty(menu-mobile.sections) }
 width: fill-container
-padding-bottom.px: 24
 
 -- header-item-mobile: $obj.title
 $loop$: $menu-mobile.sections as $obj
@@ -866,13 +734,14 @@ $show-section: $menu-mobile.show-section
 
 -- end: ftd.column
 
--- ftd.column:
-if: { menu-mobile.github-icon }
-
--- github-button:
-github-url: $menu-mobile.github-url
-
--- end: ftd.column
+-- ftd.image:
+src: $assets.files.assets.cross.svg
+height.fixed.px: 24
+width: hug-content
+anchor: window
+right.px: 16
+top.px: 20
+$on-click$: $ftd.toggle($a = $menu-mobile.show-section)
 
 -- end: ftd.column
 
@@ -887,76 +756,28 @@ github-url: $menu-mobile.github-url
 
 
 
--- component header-item-mobile-view: 
-caption title:
-optional string link:
-pr.toc-item list children:
-boolean is-active: 
-boolean $open: false
-
--- ftd.column:
-$on-click$: $ftd.toggle($a = $header-item-mobile-view.open)
-$on-click-outside$: $ftd.set-bool($a = $header-item-mobile-view.open, v = false)
-
--- ftd.text: $header-item-mobile-view.title
-if: { $header-item-mobile-view.title != NULL }
-role: $inherited.types.fine-print
-link: $header-item-mobile-view.link
-white-space: nowrap
-padding-left.px: 10
-color: $inherited.colors.text-strong
-color if { header-item-mobile-view.is-active }: $inherited.colors.cta-primary.base
-margin-left.px: 10
-
--- end: ftd.column
-
--- end: header-item-mobile-view
-
-
-
-
-
-
-
-
-
-
 -- component header-item-mobile:
 caption title:
 optional string link:
 pr.toc-item list children:
-boolean is-active:
+boolean is-active: false
 boolean $show-section:
 boolean $open: false
 
--- ftd.column: 
+-- ftd.column:
 width: fill-container
 align-self: start
 $on-click$: $ftd.toggle($a = $header-item-mobile.open)
 $on-click-outside$: $ftd.set-bool($a = $header-item-mobile.open, v = false)
 
--- ftd.row:
-width: fill-container
-
 -- ftd.text: $header-item-mobile.title 
 role: $inherited.types.copy-regular
 link: $header-item-mobile.link
-color: $inherited.colors.text-strong
-color if { header-item-mobile.is-active }: $inherited.colors.cta-primary.base
+width: fill-container
+color: $inherited.colors.text
+color if { header-item-mobile.is-active }: $inherited.colors.success.text
 $on-click$: $ftd.set-bool($a = $header-item-mobile.show-section, v = true)
-padding-top.px: 24
-
--- ftd.column:
-if: { ftd.is_empty(header-item-mobile.children) }
-padding-bottom.px: 15
-
--- show-children-mobile:
-if: { !ftd.is_empty(header-item-mobile.children) }
-children: $header-item-mobile.children
-
--- end: ftd.column
-
--- end: ftd.row
+padding-vertical.px: 12
 
 -- end: ftd.column
 
@@ -976,6 +797,7 @@ optional string site-name:
 -- ftd.text: μ
 if: { fallback-title.site-name == NULL }
 role: $inherited.types.copy-small
+role if { ftd.device == "mobile" }: $inherited.types.copy-large
 color: $inherited.colors.background.step-1
 
 -- end: ftd.row
@@ -1377,6 +1199,7 @@ border-color: $inherited.colors.success.base
 padding-top.px: 32
 margin-top.px: 16
 color: $inherited.colors.success.base
+padding-horizontal.px if { ftd.device == "mobile"}: 12
 
 -- ftd.row:
 width: fill-container

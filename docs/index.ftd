@@ -10,11 +10,11 @@ family. Its unique look and feel attracts tech gigs.
 FTD `ps` can be applied to your websites easily. We recommend you first go through
 our [FASTN template documentation](https://fastn.com/install/-/build/).
 
-Create your first FASTN project GitHub repository using our [FASTN template](https://github.com/fastn-stack/fastn-template). 
+Create your first FASTN project GitHub repository using our [FASTN template](https://github.com/fastn-stack/fastn-template).
 
 Now follow below given steps to start using this `texty-ps` template:
 
-Add below lines to FPM.ftd file:
+Add below lines to FASTN.ftd file:
 
 -- ds.code:
 lang: ftd
