@@ -4,13 +4,13 @@
 
 FTD `texty-ps` helps you to create your personal blog or site with ease. Perfect 
 for the personal site of techies. This `ps`(Personal site) template uses `Roboto-mono`
-[monospaced font from `Roboto`](https://fifthtry.github.io/roboto-mono/) font 
+[monospaced font from `Roboto`](https://github.com/fastn-community/roboto-mono-font) font 
 family. Its unique look and feel attracts tech gigs. 
 
 FTD `ps` can be applied to your websites easily. We recommend you first go through
-our [FPM template documentation](https://fastn.dev/author/create-on-github/).
+our [FASTN template documentation](https://fastn.com/install/-/build/).
 
-Create your first FPM project GitHub repository using our [FPM template](https://github.com/ftd-lang/fastn-template). 
+Create your first FASTN project GitHub repository using our [FASTN template](https://github.com/fastn-stack/fastn-template). 
 
 Now follow below given steps to start using this `texty-ps` template:
 

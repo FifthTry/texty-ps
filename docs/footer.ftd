@@ -18,14 +18,9 @@ lang: ftd
 \-- import: fifthtry.github.io/texty-ps as ps
 \-- import: yourUserName.github.io/YourRepoName/assets
 
-\-- ps.copyright: Copyright 2018-2022 John Doe.
-
 \-- ps.footer:
-
-Maintained and updated by John Doe.
-
-\-- ps.site-logo:
-dark: $assets.files.static.logo.png.dark
-light: $assets.files.static.logo.png.light
+is-margin: $page-desktop.is-margin
+copyright: $common.copyright
+info: $common.info
 
 -- end: ps.page
