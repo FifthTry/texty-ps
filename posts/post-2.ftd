@@ -1,0 +1,30 @@
+-- import: fifthtry.github.io/texty-ps as ps
+
+-- ps.page: Sitting in a cafe
+show-toc: false
+
+Sitting in a cafe watching people walk by can be an interesting way to spend
+time. Some people really enjoy it because it makes them feel as if they were a
+part of other people's life stories. Cafe quotes show us that the friendly
+atmosphere at cafes helps people be more sociable and lively, so cafes can be a
+great place for hanging out with your friends.
+
+-- ds.image: This is the image with caption
+src: $assets.files.assets.image-placeholder.png
+width: fill-container
+
+Lorem Ipsum is simply dummy text of the printing and typesetting 
+in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+
+-- ps.article-card:
+timestamp: 20
+
+Lorem Ipsum is simply dummy text of the printing and typesetting in the 1960s
+with the release of Letraset sheets containing Lorem Ipsum passages, and more
+recently with desktop publishing software like Aldus PageMaker including
+versions of Lorem Ipsum. passages, and more recently with desktop publishing
+software like Aldus PageMaker including versions of Lorem Ipsum.passages, and
+more recently with desktop publishing software like Aldus PageMaker including
+versions of Lorem Ipsum.
+
+-- end: ps.page
