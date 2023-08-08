@@ -6,7 +6,7 @@
 You can add all configurations like footer info, site name, site logo into the new
 file `config.ftd`.
 
-Create a new `FPM` folder into your `FTD` web project `<root>` folder. Add a new FTD
+Create a new `FASTN` folder into your `FTD` web project `<root>` folder. Add a new FTD
 file `config.ftd` into it.
 
 Add your site-name, site-logo and copyright information into `config.ftd` like below:
