@@ -1,40 +1,27 @@
-# Welcome to Texty Personal Website [FPM site](https://fpm.dev/)
+# Welcome to [FASTN texty-ps](https://fifthtry.github.io/texty-ps/)
+![Contributors](https://img.shields.io/github/contributors/fifthtry/texty-ps?color=dark-green) [![Discord](https://img.shields.io/discord/793929082483769345)](https://discord.com/channels/793929082483769345/) ![License](https://img.shields.io/github/license/fifthtry/texty-ps)
+# Overview
 
+⚡️ [texty-ps](https://fifthtry.github.io/texty-ps/) will help you create a beautiful documentation site in no time.
 
+It provides out-of-the-box documentation features that can be used to create any kind of site(personal website, blog, etc).
 
-> 🧑‍🚀 **Seasoned traveler?** update this file. Enjoy!
+## How it looks?
 
-![doc-site](doc-site-example.png)
+![texty-ps](/static/texty-ps-example-dark.png)
 
+## 🚀 Fast Track
 
-## 🚀 Project Structure
+Use this fastn template to create your first [fastn web-site](https://fastn.com/expander/hello-world/-/build/) project in just 5 minutes!
 
-Inside of your FPM project, you'll see the following folders and files:
+## 🌟 Whats next?
 
-```
-/
-├── .build/
-│   └── index.html
-├── .packages/
-│   └── fifthtry.github.io/
-│   	└── All downloaded dependencies
-│   	
-├── FPM.ftd
-├── index.ftd
-└── README.md
-```
+Read our [texty-ps documentation](https://fifthtry.github.io/texty-ps/)
 
-## 🧞 Commands
+Create your first page. [Click here to know more](https://fifthtry.github.io/texty-ps/page/)
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                | Action                                             |
-| :--------------------- | :------------------------------------------------- |
-| `fpm build`            | FPM builder installs all `FPM` dependencies        |
-| `fpm serve`            | Starts local dev server at available port`localhost:8000`          |
-
-
+## ⚓ [Changelog](Changelog.md)
 
 ## 👀 Want to learn more?
 
-Feel free to check [our documentation](https://fpm.dev/) or jump into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
+Feel free to check our [expander course](https://fastn.com/expander/) or jump into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).

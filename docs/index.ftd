@@ -8,9 +8,9 @@ for the personal site of techies. This `ps`(Personal site) template uses `Roboto
 family. Its unique look and feel attracts tech gigs. 
 
 FTD `ps` can be applied to your websites easily. We recommend you first go through
-our [FPM template documentation](https://fpm.dev/author/create-on-github/).
+our [FPM template documentation](https://fastn.dev/author/create-on-github/).
 
-Create your first FPM project GitHub repository using our [FPM template](https://github.com/ftd-lang/fpm-template). 
+Create your first FPM project GitHub repository using our [FPM template](https://github.com/ftd-lang/fastn-template). 
 
 Now follow below given steps to start using this `texty-ps` template:
 
@@ -19,7 +19,7 @@ Add below lines to FPM.ftd file:
 -- ds.code:
 lang: ftd
 
-\-- fpm.dependency: fifthtry.github.io/texty-ps as ps
-\-- fpm.auto-import: ps
+\-- fastn.dependency: fifthtry.github.io/texty-ps as ps
+\-- fastn.auto-import: ps
 
 -- end: ps.page
