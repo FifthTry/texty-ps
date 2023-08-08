@@ -21,3 +21,5 @@ lang: ftd
 
 \-- fpm.dependency: fifthtry.github.io/texty-ps as ps
 \-- fpm.auto-import: ps
+
+-- end: ps.page

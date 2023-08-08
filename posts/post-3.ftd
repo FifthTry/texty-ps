@@ -5,32 +5,37 @@
 -- ps.page: Gratitude and humility
 show-toc: false
 
-We learned about gratitude and humility - that so many people had a hand in our success, from the teachers who inspired us to the janitors who kept our school clean... and we were taught to value everyone's contribution and treat everyone with respect.
+We learned about gratitude and humility - that so many people had a hand in our
+success, from the teachers who inspired us to the janitors who kept our school
+clean... and we were taught to value everyone's contribution and treat everyone
+with respect.
 
 -- ps.article-card:
 timestamp: 20
 
-Lorem Ipsum is simply dummy text of the printing and typesetting 
-in the 1960s with the release of Letraset sheets containing Lorem Ipsum 
-passages, and more recently with desktop publishing software like Aldus 
-PageMaker including versions of Lorem Ipsum.
-passages, and more recently with desktop publishing software like Aldus 
-PageMaker including versions of Lorem Ipsum.passages, and more recently with desktop publishing software like Aldus 
-PageMaker including versions of Lorem Ipsum.
+Lorem Ipsum is simply dummy text of the printing and typesetting in the 1960s
+with the release of Letraset sheets containing Lorem Ipsum passages, and more
+recently with desktop publishing software like Aldus PageMaker including
+versions of Lorem Ipsum. passages, and more recently with desktop publishing
+software like Aldus PageMaker including versions of Lorem Ipsum.passages, and
+more recently with desktop publishing software like Aldus PageMaker including
+versions of Lorem Ipsum.
 
 -- ds.image:
-src: $assets.files.static.image-placeholder.png
-width: fill
+src: $assets.files.assets.image-placeholder.png
+width: fill-container
 
 Lorem Ipsum is simply dummy text of the printing and typesetting 
 in the 1960s with the release of Letraset sheets containing Lorem Ipsum
 
 -- ds.markdown:
 
-Lorem Ipsum is simply dummy text of the printing and typesetting 
-in the 1960s with the release of Letraset sheets containing Lorem Ipsum 
-passages, and more recently with desktop publishing software like Aldus 
-PageMaker including versions of Lorem Ipsum.
-passages, and more recently with desktop publishing software like Aldus 
-PageMaker including versions of Lorem Ipsum.passages, and more recently with desktop publishing software like Aldus 
-PageMaker including versions of Lorem Ipsum.
+Lorem Ipsum is simply dummy text of the printing and typesetting in the 1960s
+with the release of Letraset sheets containing Lorem Ipsum passages, and more
+recently with desktop publishing software like Aldus PageMaker including
+versions of Lorem Ipsum. passages, and more recently with desktop publishing
+software like Aldus PageMaker including versions of Lorem Ipsum.passages, and
+more recently with desktop publishing software like Aldus PageMaker including
+versions of Lorem Ipsum.
+
+-- end: ps.page

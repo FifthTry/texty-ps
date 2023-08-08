@@ -1,9 +1,7 @@
-
--- import: fpm
 -- import: fifthtry.github.io/texty-ps as ps
 
 -- ps.page: About Me
 
 Want to know something about me? read below articles.
 
-
+-- end: ps.page
