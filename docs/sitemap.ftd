@@ -3,7 +3,7 @@
 -- ps.page: Updating sitemap links
 
 To navigate between pages you need to keep updating the sitemap of your `ps`. In `ps`
-we have added a sitemap into the `FPM.ftd` file.
+we have added a sitemap into the `FASTN.ftd` file.
 
 Each new file you create if you want to add it to the main menu(Top navigation) then 
 use below code sample.
@@ -11,7 +11,7 @@ use below code sample.
 Let's say you have created a new `about-me.ftd` file into the `<root>` folder of your
 FTD web project then add it into the `fastn.sitemap` component.
 
-Add the below line into the `FPM.ftd` folder. Ensure `-- fastn.sitemap:` should be called 
+Add the below line into the `FASTN.ftd` folder. Ensure `-- fastn.sitemap:` should be called 
 only one time.
 
 -- ds.code:
@@ -32,7 +32,7 @@ file into it.
 Each folder you create, we recommend adding an `index.ftd` file into it, to access 
 folder into `fastn.sitemap` by default.
 
-Adding your `blog` folder into `fastn.sitemap` inside `FPM.ftd` file:
+Adding your `blog` folder into `fastn.sitemap` inside `FASTN.ftd` file:
 
 -- ds.code:
 lang: ftd
@@ -51,7 +51,7 @@ lang: ftd
 -- ps.h2: `TOC` into page using sitemap
 
 You can use `fastn.sitemap` for table of contents also. To create TOC of your `ps`
-into `FPM.ftd` using sitemap follow below given pattern. 
+into `FASTN.ftd` using sitemap follow below given pattern. 
 
 Showing example of our `Documentation` page TOC:
 
@@ -68,7 +68,7 @@ lang: ftd
 
 - Documentation:
   - Using `ps.page`: /docs/page/
-  - Updating `FPM.ftd` sitemap links: /docs/sitemap/
+  - Updating `FASTN.ftd` sitemap links: /docs/sitemap/
   - Updating your resume: /docs/resume/
   - Using typography: /docs/typography/
   - Updating Footer info: /docs/footer/
