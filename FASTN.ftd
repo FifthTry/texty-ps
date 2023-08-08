@@ -6,6 +6,7 @@
 ;;-- fastn.dependency: fifthtry.github.io/resume
 ;;-- fastn.dependency: fifthtry.github.io/caffeine-resume
 -- fastn.dependency: fifthtry.github.io/roboto-mono
+-- fastn.dependency: fastn-community.github.io/dark-flame-cs
 
 -- fastn.auto-import: fifthtry.github.io/texty-ps/FASTN/ds
 -- fastn.auto-import: fifthtry.github.io/texty-ps/assets

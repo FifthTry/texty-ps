@@ -1,4 +1,5 @@
 -- import: fastn/processors as pr
+-- import: fastn-community.github.io/dark-flame-cs as cs
 
 -- page: John Doe
 avatar: $assets.files.assets.avatar.png
@@ -45,6 +46,7 @@ boolean show-footer: $common.show-footer
 ftd.ui list footer:
 optional boolean is-margin: false
 children wrapper:
+ftd.color-scheme color-scheme: $cs.main
 
 -- ftd.document:
 title if { page.document-title != NULL }: $page.document-title
