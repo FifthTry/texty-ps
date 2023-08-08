@@ -1,5 +1,4 @@
 -- import: fifthtry.github.io/texty-ps as ps
--- import: fifthtry.github.io/texty-ps/assets
 
 -- ps.page: Sitting in a cafe
 show-toc: false

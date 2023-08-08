@@ -3,8 +3,8 @@
 -- fastn.package: fifthtry.github.io/texty-ps
 
 -- fastn.dependency: fastn-community.github.io/doc-site as doc-site
--- fastn.dependency: fifthtry.github.io/resume
--- fastn.dependency: fifthtry.github.io/caffeine-resume
+;;-- fastn.dependency: fifthtry.github.io/resume
+;;-- fastn.dependency: fifthtry.github.io/caffeine-resume
 -- fastn.dependency: fifthtry.github.io/roboto-mono
 
 -- fastn.auto-import: fifthtry.github.io/texty-ps/FASTN/ds
