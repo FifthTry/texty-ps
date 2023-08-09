@@ -1,27 +1,41 @@
-# Welcome to [FASTN texty-ps](https://fifthtry.github.io/texty-ps/)
-![Contributors](https://img.shields.io/github/contributors/fifthtry/texty-ps?color=dark-green) [![Discord](https://img.shields.io/discord/793929082483769345)](https://discord.com/channels/793929082483769345/) ![License](https://img.shields.io/github/license/fifthtry/texty-ps)
 # Overview
 
-⚡️ [texty-ps](https://fifthtry.github.io/texty-ps/) will help you create a beautiful documentation site in no time.
+[texty-ps](https://fifthtry.github.io/texty-ps/) will help you create a
+beautiful fastn portfolio or personal site in no time.
 
-It provides out-of-the-box documentation features that can be used to create any kind of site(personal website, blog, etc).
+It provides out-of-the-box documentation features that can be used to create any
+kind of portfolio / personal website, blog, etc.
 
-## How it looks?
+# Preview
 
-![texty-ps](/static/texty-ps-example-dark.png)
+![texty-ps](.github/assets/texty-ps-dark.png)
 
-## 🚀 Fast Track
+## Get Rolling
 
-Use this fastn template to create your first [fastn web-site](https://fastn.com/expander/hello-world/-/build/) project in just 5 minutes!
+[Click here](https://fifthtry.github.io/texty-ps/) to learn how to use this template.
 
-## 🌟 Whats next?
+# [Dive into the Docs](https://fifthtry.github.io/texty-ps/docs/)
 
-Read our [texty-ps documentation](https://fifthtry.github.io/texty-ps/)
+# See it in Action!
 
-Create your first page. [Click here to know more](https://fifthtry.github.io/texty-ps/page/)
+Explore websites and projects that have utilized this component/template 
+**[here](https://fifthtry.github.io/texty-ps/)** for inspiration.
 
-## ⚓ [Changelog](Changelog.md)
+## fastn and Curious?
 
-## 👀 Want to learn more?
+Discover more of fastn here.
 
-Feel free to check our [expander course](https://fastn.com/expander/) or jump into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
+- [Expander Crash Course](https://fastn.com/expander/)
+- [Video Tutorials](https://fastn.com/expander/hello-world/-/build/)
+- [Explore more Templates/ Components/ Package](https://fastn.com/featured/)
+
+## Become a fastn Contributor
+
+1.  Finish the [Expander Crash Course](https://fastn.com/expander/)
+2.  Share your progress and ideas on [Discord](https://discord.gg/bucrdvptYd).
+3.  Let our team guide you on your contributor journey.
+
+## Become a fastn-trailblazer
+
+- [Join our Discord Server](https://discord.gg/bucrdvptYd) to connect with other fastn enthusiasts and stay up to date with the latest developments.
+- [Star us on GitHub](https://github.com/fastn-stack/fastn/)
