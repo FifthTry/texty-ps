@@ -1,22 +1,20 @@
--- import: fifthtry.github.io/texty-ps as ps
-
--- ps.page: Using `-- ps.page:` component
+-- ds.page: Using `-- ds.page:` component
 
 Every page you add to your website in the form of different `FTD` files should contain
-`-- ps.page:` component one time only at the top of your FTD file.
+`-- ds.page:` component one time only at the top of your FTD file.
 
 For example you are going to create an About me page for your personal site. So, 
 you will create a new FTD file named `about.ftd` or `about-me.ftd`. 
 
-Using `-- ps.page:` component into your `.ftd` file:
+Using `-- ds.page:` component into your `.ftd` file:
 
 
--- ds.code:
+-- cb.code:
 lang: ftd
 
-\-- ps.page: About me
+\-- ds.page: About me
 
 This is the body part of the page. Here you can add your about me content. 
 
 
--- end: ps.page
+-- end: ds.page

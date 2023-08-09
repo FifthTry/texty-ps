@@ -1,7 +1,5 @@
--- import: fifthtry.github.io/texty-ps as ps
-
--- ps.page: Talks
+-- ds.page: Talks
 
 Below are my presentations and talks, I delivered various times.
 
--- end: ps.page
+-- end: ds.page
