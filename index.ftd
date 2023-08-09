@@ -1,5 +1,8 @@
 -- import: fastn/processors as pr
--- import: fastn-community.github.io/dark-flame-cs as cs
+-- import: fastn-community.github.io/saturated-sunset-cs as cs
+-- import: fastn-community.github.io/typography
+export: markdown
+exposing: markdown
 
 -- page: John Doe
 avatar: $assets.files.assets.avatar.png
@@ -46,7 +49,7 @@ boolean show-footer: $common.show-footer
 ftd.ui list footer:
 optional boolean is-margin: false
 children wrapper:
-ftd.color-scheme color-scheme: $cs.main
+ftd.color-scheme colors: $cs.main
 
 -- ftd.document:
 title if { page.document-title != NULL }: $page.document-title
@@ -224,7 +227,7 @@ border-color: $inherited.colors.custom.two
 if:{ page-desktop.body != NULL }
 width: fill-container
 role: $inherited.types.copy-small
-color: $inherited.colors.success.base
+color: $inherited.colors.text
 margin-bottom.px: 26
 
 $page-desktop.body
@@ -391,7 +394,7 @@ border-color: $inherited.colors.custom.two
 if:{ page-mobile.body != NULL }
 width: fill-container
 role: $inherited.types.copy-small
-color: $inherited.colors.success.base
+color: $inherited.colors.text
 margin-bottom.px: 26
 
 $page-mobile.body
@@ -635,7 +638,7 @@ if: { !header-item.is-active }
 role: $inherited.types.copy-small
 link if { header-item.link != NULL }: $header-item.link
 white-space: nowrap
-color: $inherited.colors.text
+color: $inherited.colors.text-strong
 border-bottom-width.px: 1
 border-color: $inherited.colors.border-strong
 
@@ -860,19 +863,19 @@ spacing.fixed.px: 12
 role: $inherited.types.fine-print
 white-space: nowrap
 style: hairline
-color: $inherited.colors.success.base
+color: $inherited.colors.text
 
 -- ftd.text: $article-card.timestamp
 role: $inherited.types.fine-print
 white-space: nowrap
 style: hairline
-color: $inherited.colors.success.base
+color: $inherited.colors.text
 
 -- end: ftd.row
 
 -- ftd.text:
 role: $inherited.types.copy-regular
-color: $inherited.colors.success.base
+color: $inherited.colors.text
 margin-bottom.px: 28
 
 $article-card.body
@@ -1003,7 +1006,7 @@ align-content: center
 -- ftd.row: 
 width.fixed.px: 6
 height.fixed.px: 2
-background.solid: $inherited.colors.background.step-1
+background.solid: $inherited.colors.text-strong
 align-content: center
 margin-horizontal.px: 12
 
@@ -1017,8 +1020,8 @@ color: $inherited.colors.custom.eight
 background.solid if { header-item-toc.mouse-in }: $inherited.colors.custom.eight
 $on-mouse-enter$: $ftd.set-bool($a = $header-item-toc.mouse-in, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $header-item-toc.mouse-in, v = false)
-color if {header-item-toc.is-active}: $inherited.colors.success.base
-color if {header-item-toc.mouse-in}: $inherited.colors.success.base
+color if {header-item-toc.is-active}: $inherited.colors.text-strong
+color if {header-item-toc.mouse-in}: $inherited.colors.text-strong
 border-bottom-width.px: 1
 border-color: $inherited.colors.custom.eight
 
@@ -1031,8 +1034,8 @@ color: $inherited.colors.custom.eight
 background.solid if { header-item-toc.mouse-in }: $inherited.colors.custom.eight
 $on-mouse-enter$: $ftd.set-bool($a = $header-item-toc.mouse-in, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $header-item-toc.mouse-in, v = false)
-color if {header-item-toc.is-active}: $inherited.colors.success.base
-color if {header-item-toc.mouse-in}: $inherited.colors.success.base
+color if {header-item-toc.is-active}: $inherited.colors.text-strong
+color if {header-item-toc.mouse-in}: $inherited.colors.text-strong
 border-bottom-width.px: 1
 border-color: $inherited.colors.custom.eight
 
@@ -1059,7 +1062,7 @@ color: $inherited.colors.success.base
 -- ftd.text: $header-item-toc.title
 if: {ftd.device == "mobile"}
 role: $inherited.types.copy-small
-color: $inherited.colors.success.base
+color: $inherited.colors.text-strong
 
 -- end: ftd.row
 
@@ -1103,8 +1106,8 @@ margin-bottom.px if {h1.body == NULL}: 20
 
 -- ftd.text: 
 if: {h1.body != NULL}
-role: $inherited.types.copy-regular
-color: $inherited.colors.success.base
+role: $inherited.types.copy-small
+color: $inherited.colors.text
 margin-bottom.px: 20
 margin-top.px: 10
 
@@ -1149,8 +1152,8 @@ margin-bottom.px if {h2.body == NULL}: 20
 
 -- ftd.text:
 if: {h2.body != NULL}
-role: $inherited.types.copy-regular
-color: $inherited.colors.success.base
+role: $inherited.types.copy-small
+color: $inherited.colors.text
 margin-bottom.px: 24
 margin-top.px: 10
 
@@ -1196,8 +1199,8 @@ margin-bottom.px if {h3.body == NULL}: 20
 
 -- ftd.text:
 if: {h3.body != NULL} 
-role: $inherited.types.copy-regular
-color: $inherited.colors.success.base
+role: $inherited.types.copy-small
+color: $inherited.colors.text
 margin-bottom.px: 24
 margin-top.px: 10
 
@@ -1221,10 +1224,10 @@ optional string info: $common.info
 width: fill-container
 border-top-width.px: 2
 border-style: dashed
-border-color: $inherited.colors.success.base
+border-color: $inherited.colors.border-strong
 padding-top.px: 32
 margin-top.px: 16
-color: $inherited.colors.success.base
+color: $inherited.colors.text-strong
 padding-horizontal.px if { ftd.device == "mobile"}: 12
 
 -- ftd.row:
@@ -1256,3 +1259,61 @@ text-align: justify
 -- end: ftd.column
 
 -- end: footer
+
+
+
+
+
+
+
+
+
+
+-- component image:
+optional caption caption:
+optional body body:
+optional string link:
+ftd.image-src src:
+optional ftd.align alignment: center
+optional ftd.resizing width:
+optional ftd.resizing height:
+
+-- ftd.column:
+width: fill-container
+align-content if { image.alignment != NULL }: $image.alignment
+height: $image.height
+
+-- ftd.image:
+src: $image.src
+width: auto
+width if { image.width != NULL }: $image.width
+max-width: fill-container
+height: auto
+
+-- ftd.text:
+if: { image.caption != NULL }
+text: $image.caption
+color: $inherited.colors.text
+role: $inherited.types.label-large
+border-bottom-left-radius.px: 5
+border-bottom-right-radius.px: 5
+background.solid: $inherited.colors.background.step-1
+padding-vertical.px: 8
+padding-horizontal.px: 20
+text-align: center
+
+-- ftd.column:
+if: { image.body != NULL }
+margin-top.px: 20
+align-content if { image.alignment != NULL }: $image.alignment
+width: auto
+width if { image.width != NULL }: $image.width
+
+-- tf.markdown:
+body: $image.body
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: image

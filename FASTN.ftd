@@ -2,16 +2,18 @@
 
 -- fastn.package: fifthtry.github.io/texty-ps
 
--- fastn.dependency: fastn-community.github.io/doc-site as doc-site
-;;-- fastn.dependency: fifthtry.github.io/resume
-;;-- fastn.dependency: fifthtry.github.io/caffeine-resume
+-- fastn.dependency: fifthtry.github.io/resume
+-- fastn.dependency: fifthtry.github.io/caffeine-resume
 -- fastn.dependency: fifthtry.github.io/roboto-mono
--- fastn.dependency: fastn-community.github.io/dark-flame-cs
+-- fastn.dependency: fastn-community.github.io/saturated-sunset-cs
+-- fastn.dependency: fastn-community.github.io/code-block
+-- fastn.dependency: fastn-community.github.io/typography
 
 -- fastn.auto-import: fifthtry.github.io/texty-ps/FASTN/ds
 -- fastn.auto-import: fifthtry.github.io/texty-ps/assets
 -- fastn.auto-import: fifthtry.github.io/texty-ps/common
--- fastn.auto-import: doc-site
+-- fastn.auto-import: fastn-community.github.io/code-block as cb
+-- fastn.auto-import: fastn-community.github.io/typography as tf
 
 -- fastn.sitemap:
 
@@ -28,9 +30,6 @@
 - Quick Links: 
   - GitHub: https://github.com/
   - Discord: https://discord.com/
-
-
-
 
 # Blog: /blog/
 
@@ -67,10 +66,7 @@
   - Discord
   url: https://discord.gg/gRfDbRpB52
 
-
-
-;;# Resume: /resume/
-
+# Resume: /resume/
 
 # Talks: /talks/
 
@@ -91,9 +87,7 @@
   - N06 30 2022 - More Than a Body: /posts/post-2/
   - N06 30 2022 - Brave, Not Perfect: /posts/post-3/
 
-
 # About: /about/
-
 
 - About my work:
   - N01 15 2022 - You are enough: /posts/post-1/
@@ -102,7 +96,6 @@
   - N07 07 2022 - Good Life, Good Vibes: /posts/post-1/
   - N06 30 2022 - The Power of Positive Thinking: /posts/post-2/
   - N06 30 2022 - It Ends With Us: /posts/post-3/
-
 
 # Essays: /essays/
 

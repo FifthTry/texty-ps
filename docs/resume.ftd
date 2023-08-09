@@ -1,16 +1,13 @@
--- import: fifthtry.github.io/texty-ps as ps
-
-
--- ps.page: Updating your resume
+-- ds.page: Updating your resume
 
 We have created resume themes also. You can choose a resume theme you would like 
-to use in your `ps` [from here](https://github.com/fifthtry/resume).
+to use in your `ds` [from here](https://github.com/fifthtry/resume).
 
 Here we are using [Caffeine theme](https://fifthtry.github.io/caffeine-resume/).
 
 Adding `fifthtry.github.io/caffeine-resume` as dependency into `FASTN.ftd`:
 
--- ds.code:
+-- cb.code:
 lang: ftd
 
 \-- fastn.dependency: fifthtry.github.io/resume
@@ -25,4 +22,4 @@ resume info into a `resume.ftd` file.
 
 Add your resume link into [sitemap](docs/sitemap/) and you are done.
 
--- end: ps.page
+-- end: ds.page

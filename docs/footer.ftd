@@ -1,7 +1,4 @@
--- import: fifthtry.github.io/texty-ps as ps
-
-
--- ps.page: Updating Footer info
+-- ds.page: Updating Footer info
 
 You can add all configurations like footer info, site name, site logo into the new
 file `config.ftd`.
@@ -11,16 +8,15 @@ file `config.ftd` into it.
 
 Add your site-name, site-logo and copyright information into `config.ftd` like below:
 
-
--- ds.code:
+-- cb.code:
 lang: ftd
 
 \-- import: fifthtry.github.io/texty-ps as ps
 \-- import: yourUserName.github.io/YourRepoName/assets
 
-\-- ps.footer:
+\-- texty-ps.page.footer:
 is-margin: $page-desktop.is-margin
 copyright: $common.copyright
 info: $common.info
 
--- end: ps.page
+-- end: ds.page
