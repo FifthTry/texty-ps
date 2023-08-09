@@ -24,13 +24,14 @@ lang: ftd
 Using the code given above we can show the hello world output as given below.
 
 -- ftd.text: Hello World
-color: $inherited.colors.background.step-1
+color: $inherited.colors.text-strong
 border-width.px: 1
 padding.px: 20
+margin-top.px: 24
 
 -- ftd.text:
-margin-top.px: 36
-color: $inherited.colors.background.step-1
+margin-top.px: 24
+color: $inherited.colors.text-strong
 
 Here is a FTD document, that will help us to know how we can set image in ftd:
 
