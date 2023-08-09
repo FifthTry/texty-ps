@@ -10,6 +10,8 @@ $processor$: pr.full-sitemap
 
 -- boolean show-footer: true
 
+-- ftd.image-src site-logo: $assets.files.assets.ipsum-logo.svg
+
 -- optional string copyright: Copyright 2012-2022 FifthTry.
 
 -- string info: Lorem Ipsum is simply dummy text of the printing and typesetting in the 1960s

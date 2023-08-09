@@ -1,11 +1,9 @@
 -- import: fifthtry.github.io/caffeine-resume as caffeine
--- import: fifthtry.github.io/texty-ps as ps
--- import: fifthtry.github.io/resume as r
 -- import: fifthtry.github.io/resume/sample as s
 
--- ps.page: resume
+-- ds.page: Resume
 
 -- caffeine.show-resume:
 resume: $s.john-doe
 
--- end: ps.page
+-- end: ds.page

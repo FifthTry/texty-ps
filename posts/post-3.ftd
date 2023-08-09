@@ -1,6 +1,4 @@
--- import: fifthtry.github.io/texty-ps as ps
-
--- ps.page: Gratitude and humility
+-- ds.page: Gratitude and humility
 show-toc: false
 
 We learned about gratitude and humility - that so many people had a hand in our
@@ -8,32 +6,32 @@ success, from the teachers who inspired us to the janitors who kept our school
 clean... and we were taught to value everyone's contribution and treat everyone
 with respect.
 
--- ps.article-card:
+-- ds.article-card:
 timestamp: 20
 
-Lorem Ipsum is simply dummy text of the printing and typesetting in the 1960s
-with the release of Letraset sheets containing Lorem Ipsum passages, and more
+Lorem Idsum is simply dummy text of the printing and typesetting in the 1960s
+with the release of Letraset sheets containing Lorem Idsum passages, and more
 recently with desktop publishing software like Aldus PageMaker including
-versions of Lorem Ipsum. passages, and more recently with desktop publishing
-software like Aldus PageMaker including versions of Lorem Ipsum.passages, and
+versions of Lorem Idsum. passages, and more recently with desktop publishing
+software like Aldus PageMaker including versions of Lorem Idsum.passages, and
 more recently with desktop publishing software like Aldus PageMaker including
-versions of Lorem Ipsum.
+versions of Lorem Idsum.
 
 -- ds.image:
 src: $assets.files.assets.image-placeholder.png
 width: fill-container
 
-Lorem Ipsum is simply dummy text of the printing and typesetting 
-in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+Lorem Idsum is simply dummy text of the printing and typesetting 
+in the 1960s with the release of Letraset sheets containing Lorem Idsum
 
--- ds.markdown:
+-- tf.markdown:
 
-Lorem Ipsum is simply dummy text of the printing and typesetting in the 1960s
-with the release of Letraset sheets containing Lorem Ipsum passages, and more
+Lorem Idsum is simply dummy text of the printing and typesetting in the 1960s
+with the release of Letraset sheets containing Lorem Idsum passages, and more
 recently with desktop publishing software like Aldus PageMaker including
-versions of Lorem Ipsum. passages, and more recently with desktop publishing
-software like Aldus PageMaker including versions of Lorem Ipsum.passages, and
+versions of Lorem Idsum. passages, and more recently with desktop publishing
+software like Aldus PageMaker including versions of Lorem Idsum.passages, and
 more recently with desktop publishing software like Aldus PageMaker including
-versions of Lorem Ipsum.
+versions of Lorem Idsum.
 
--- end: ps.page
+-- end: ds.page

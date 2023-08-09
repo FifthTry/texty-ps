@@ -1,8 +1,6 @@
--- import: fifthtry.github.io/texty-ps as ps
+-- ds.page: Updating sitemap links
 
--- ps.page: Updating sitemap links
-
-To navigate between pages you need to keep updating the sitemap of your `ps`. In `ps`
+To navigate between pages you need to keep updating the sitemap of your `ds`. In `ds`
 we have added a sitemap into the `FASTN.ftd` file.
 
 Each new file you create if you want to add it to the main menu(Top navigation) then 
@@ -14,7 +12,7 @@ FTD web project then add it into the `fastn.sitemap` component.
 Add the below line into the `FASTN.ftd` folder. Ensure `-- fastn.sitemap:` should be called 
 only one time.
 
--- ds.code:
+-- cb.code:
 lang: ftd
 
 \-- fastn.sitemap:
@@ -23,7 +21,7 @@ lang: ftd
 
 # About me: /about-me/
 
--- ps.h2: Accessing a folder into sitemap:
+-- ds.h2: Accessing a folder into sitemap:
 
 If you have created a folder for your blog posts named `blog` into the `<root>`
 folder of your project like `<your-ftd-project>/blog/` and added a `first-post.ftd`
@@ -34,7 +32,7 @@ folder into `fastn.sitemap` by default.
 
 Adding your `blog` folder into `fastn.sitemap` inside `FASTN.ftd` file:
 
--- ds.code:
+-- cb.code:
 lang: ftd
 
 \-- fastn.sitemap:
@@ -48,14 +46,14 @@ lang: ftd
 - Blog posts:
   - My First Post: /blog/first-post/
 
--- ps.h2: `TOC` into page using sitemap
+-- ds.h2: `TOC` into page using sitemap
 
-You can use `fastn.sitemap` for table of contents also. To create TOC of your `ps`
+You can use `fastn.sitemap` for table of contents also. To create TOC of your `ds`
 into `FASTN.ftd` using sitemap follow below given pattern. 
 
 Showing example of our `Documentation` page TOC:
 
--- ds.code:
+-- cb.code:
 lang: ftd
 
 \-- fastn.sitemap:
@@ -67,15 +65,15 @@ lang: ftd
 # Documentation: /docs/
 
 - Documentation:
-  - Using `ps.page`: /docs/page/
+  - Using `ds.page`: /docs/page/
   - Updating `FASTN.ftd` sitemap links: /docs/sitemap/
   - Updating your resume: /docs/resume/
   - Using typography: /docs/typography/
   - Updating Footer info: /docs/footer/
 
--- ds.markdown:
+-- tf.markdown:
 
 Output of above, see below toc of our documentation page. TOC appears above 
-footer of your `ps`.
+footer of your `ds`.
 
--- end: ps.page
+-- end: ds.page

@@ -1,7 +1,5 @@
--- import: fifthtry.github.io/texty-ps as ps
-
--- ps.page: Blog
+-- ds.page: Blog
 
 In this part you can see all the available blog posted by me.
 
--- end: ps.page
+-- end: ds.page
