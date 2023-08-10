@@ -827,7 +827,7 @@ optional string site-name:
 if: { fallback-title.site-name == NULL }
 role: $inherited.types.copy-small
 role if { ftd.device == "mobile" }: $inherited.types.copy-large
-color: $inherited.colors.text-strong
+color: $inherited.colors.custom.eight
 
 -- end: ftd.row
 
